@@ -52,9 +52,44 @@
     .section {
       padding: 40px 20px;
     }
-  </style>
+  </style>.navbar{
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+}
+
+.logo{
+    color:#d4af37;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#d4af37;
+}
 </head>
 <body>
+  <nav class="navbar">
+    <div class="logo">MG</div>
+    <div class="nav-links">
+        <a href="#">INICIO</a>
+        <a href="#">BIOGRAFÍA</a>
+        <a href="#">MÚSICA</a>
+        <a href="#">VIDEOS</a>
+        <a href="#">GALERÍA</a>
+        <a href="#">CONTACTO</a>
+    </div>
+</nav>
   <section class="hero">
     <h1>Martín González | Maravillas</h1>
 
