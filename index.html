@@ -14,26 +14,50 @@
       text-align: center;
     }
 
-    .hero {}.hero {background: #111;
-    min-height: 100vh;
-    padding: 80px 20px;.hero {
-    background: url(...);
-    min-height: 100vh;
-    padding: 80px 20px;
-    color: white;
-    text-shadow: 2px 2px 10px rgba(0,0,0,.8);
-}
-}
+    .navbar {
+      background: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 40px;
+    }
+
+    .logo {
+      color: #d4af37;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      background: #111;
+      min-height: 100vh;
+      padding: 80px 20px;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,.8);
+    }
+
+    .hero img {
+      width: 40%;
+      max-width: 650px;
+      border-radius: 18px;
+      display: block;
+      margin: 30px auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
 
     h1 {
-      font-size: 48px;.hero img {
-    width: 40%;
-    max-width: 650px;
-    border-radius: 18px;
-    display: block;
-    margin: 30px auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
-}
+      font-size: 48px;
       margin-bottom: 10px;
     }
 
@@ -49,86 +73,73 @@
       margin: 20px auto;
     }
 
-    .section {
+    .section,
+    .seccion {
       padding: 40px 20px;
     }
-  </style>.navbar{
-    background:#111;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 40px;
-}
-
-.logo{
-    color:#d4af37;
-    font-size:32px;
-    font-weight:bold;
-}
-
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:#d4af37;
-}
+  </style>
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo">MG</div>
     <div class="nav-links">
-        <a href="#">INICIO</a>
-        <a href="#">BIOGRAFÍA</a>
-        <a href="#">MÚSICA</a>
-        <a href="#">VIDEOS</a>
-        <a href="#">GALERÍA</a>
-        <a href="#">CONTACTO</a>
+      <a href="#">INICIO</a>
+      <a href="#">BIOGRAFÍA</a>
+      <a href="#">MÚSICA</a>
+      <a href="#">VIDEOS</a>
+      <a href="#">GALERÍA</a>
+      <a href="#">CONTACTO</a>
     </div>
-</nav>
+  </nav>
+
   <section class="hero">
     <h1>Martín González | Maravillas</h1>
-
     <h2>Artista independiente y compositor</h2>
-
-    <p>
-      Una historia de música, experiencias y canciones nacidas de la vida.
-    </p><img src="IMG_5775.jpeg" alt="Martín González">
+    <p>Una historia de música, experiencias y canciones nacidas de la vida.</p>
+    <img src="IMG_5775.jpeg" alt="Martín González">
   </section>
 
   <section class="section">
     <h2>Bienvenido a mi sitio oficial</h2>
-
     <p>
       Mi música nace de las vivencias, del amor, del desamor
       y de los momentos que dejan huella en el corazón.
     </p>
   </section>
-<section class="section">
-  <h2>Biografía</h2>
 
-  <p>
-    Soy Martín González, artista independiente y compositor.
-    Mi música nace de las experiencias de vida, de los sentimientos
-    que nos transforman y de las historias que dejan una huella en el corazón.
-  </p>
+  <section class="section">
+    <h2>Biografía</h2>
+    <p>
+      Soy Martín González, artista independiente y compositor.
+      Mi música nace de las experiencias de vida, de los sentimientos
+      que nos transforman y de las historias que dejan una huella en el corazón.
+    </p>
+    <p>
+      Cada canción representa una vivencia, un recuerdo o una emoción
+      convertida en melodía. Mi propósito es conectar con las personas
+      a través de letras sinceras y canciones que hablan de amor,
+      desamor y momentos reales de la vida.
+    </p>
+  </section>
 
-  <p>
-    Cada canción representa una vivencia, un recuerdo o una emoción
-    convertida en melodía. Mi propósito es conectar con las personas
-    a través de letras sinceras y canciones que hablan de amor,
-    desamor y momentos reales de la vida.
-  </p>
-</section><section class="seccion">
-<h2>Mis raíces</h2>
-<p>Mis raíces nacen de una historia familiar llena de esfuerzo, valores y enseñanzas que han marcado mi camino. El nombre Maravillas representa la fuerza de creer que siempre existe una solución y que no hay imposibles cuando se busca salir adelante.</p>
-</section><section class="seccion">
-<h2>Mi música</h2>
-<p>...</p><p>Mi música nace de historias reales, experiencias de vida y emociones que se transforman en canciones. Cada composición busca transmitir sentimientos de amor, desamor y momentos que forman parte de nuestro camino.</p>
-</section>
+  <section class="section">
+    <h2>Mis raíces</h2>
+    <p>
+      Mis raíces nacen de una historia familiar llena de esfuerzo, valores
+      y enseñanzas que han marcado mi camino. El nombre Maravillas representa
+      la fuerza de creer que siempre existe una solución y que no hay imposibles
+      cuando se busca salir adelante.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Mi música</h2>
+    <p>
+      Mi música nace de historias reales, experiencias de vida y emociones que
+      se transforman en canciones. Cada composición busca transmitir sentimientos
+      de amor, desamor y momentos que forman parte de nuestro camino.
+    </p>
+  </section>
 </body>
 </html>
