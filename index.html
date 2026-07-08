@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martín González | Artista Independiente</title>
+  <title>Martín González | Maravillas</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #111;
+      background: #0b0b0b;
       color: white;
-      text-align: center;
     }
 
     .navbar {
-      background: #111;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 40px;
+      padding: 20px 50px;
+      background: #050505;
+      border-bottom: 1px solid #333;
     }
 
     .logo {
       color: #d4af37;
-      font-size: 32px;
+      font-size: 34px;
       font-weight: bold;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 28px;
+      font-size: 14px;
       font-weight: bold;
     }
 
@@ -40,106 +41,196 @@
     }
 
     .hero {
-      background: #111;
-      min-height: 100vh;
-      padding: 80px 20px;
-      color: white;
-      text-shadow: 2px 2px 10px rgba(0,0,0,.8);
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 70px 80px;
+      background: linear-gradient(to right, #050505, #181818);
     }
 
-    .hero img {
-      width: 40%;
-      max-width: 650px;
-      border-radius: 18px;
-      display: block;
-      margin: 30px auto;
-      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    .hero-text {
+      max-width: 560px;
     }
 
-    h1 {
-      font-size: 48px;
+    .hero-text h1 {
+      font-size: 56px;
       margin-bottom: 10px;
+      color: white;
     }
 
-    h2 {
+    .hero-text h2 {
+      color: #d4af37;
+      font-size: 28px;
       font-weight: normal;
-      color: #ccc;
+      margin-bottom: 20px;
     }
 
-    p {
+    .hero-text p {
       font-size: 20px;
       line-height: 1.6;
-      max-width: 700px;
-      margin: 20px auto;
+      color: #ddd;
     }
 
-    .section,
-    .seccion {
-      padding: 40px 20px;
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      margin-right: 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #111;
+    }
+
+    .btn-dark {
+      border: 1px solid #d4af37;
+      color: white;
+    }
+
+    .hero-img img {
+      width: 420px;
+      border-radius: 18px;
+      box-shadow: 0 15px 40px rgba(0,0,0,.6);
+    }
+
+    .section {
+      padding: 70px 80px;
+      text-align: center;
+    }
+
+    .section h2 {
+      color: #d4af37;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #333;
+      width: 220px;
+      padding: 30px 20px;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      color: #d4af37;
+    }
+
+    footer {
+      background: #050505;
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+      border-top: 1px solid #333;
     }
   </style>
 </head>
 
 <body>
+
   <nav class="navbar">
     <div class="logo">MG</div>
     <div class="nav-links">
       <a href="#">INICIO</a>
       <a href="#">BIOGRAFÍA</a>
-      <a href="#">MÚSICA</a>
-      <a href="#">VIDEOS</a>
-      <a href="#">GALERÍA</a>
+      <a href="#">MI MÚSICA</a>
+      <a href="#">COMPOSICIONES</a>
+      <a href="#">BLOG</a>
       <a href="#">CONTACTO</a>
     </div>
   </nav>
 
   <section class="hero">
-    <h1>Martín González | Maravillas</h1>
-    <h2>Artista independiente y compositor</h2>
-    <p>Una historia de música, experiencias y canciones nacidas de la vida.</p>
-    <img src="IMG_5775.jpeg" alt="Martín González">
+    <div class="hero-text">
+      <h1>Martín González | Maravillas</h1>
+      <h2>Las canciones nacen de una historia</h2>
+      <p>
+        Compositor, artista independiente y creador de canciones nacidas de vivencias reales.
+        Cada letra guarda una emoción, un recuerdo y una historia que merece ser contada.
+      </p>
+
+      <div class="buttons">
+        <a href="#" class="btn btn-gold">Escuchar mi música</a>
+        <a href="#" class="btn btn-dark">Conocer mi historia</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <img src="IMG_5775.jpeg" alt="Martín González">
+    </div>
   </section>
 
   <section class="section">
-    <h2>Bienvenido a mi sitio oficial</h2>
+    <h2>¿Quién es Martín González?</h2>
     <p>
-      Mi música nace de las vivencias, del amor, del desamor
-      y de los momentos que dejan huella en el corazón.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Biografía</h2>
-    <p>
-      Soy Martín González, artista independiente y compositor.
-      Mi música nace de las experiencias de vida, de los sentimientos
-      que nos transforman y de las historias que dejan una huella en el corazón.
+      Soy Martín González, artista independiente y compositor. Mi música nace de las experiencias
+      de vida, de los sentimientos que nos transforman y de las historias que dejan una huella
+      en el corazón.
     </p>
     <p>
-      Cada canción representa una vivencia, un recuerdo o una emoción
-      convertida en melodía. Mi propósito es conectar con las personas
-      a través de letras sinceras y canciones que hablan de amor,
-      desamor y momentos reales de la vida.
-    </p>
-  </section>
-
-  <section class="section">
-    <h2>Mis raíces</h2>
-    <p>
-      Mis raíces nacen de una historia familiar llena de esfuerzo, valores
-      y enseñanzas que han marcado mi camino. El nombre Maravillas representa
-      la fuerza de creer que siempre existe una solución y que no hay imposibles
-      cuando se busca salir adelante.
+      Cada canción representa una vivencia, un recuerdo o una emoción convertida en melodía.
+      Mi propósito es conectar con las personas a través de letras sinceras.
     </p>
   </section>
 
   <section class="section">
     <h2>Mi música</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Canciones</h3>
+        <p>Historias convertidas en melodía.</p>
+      </div>
+      <div class="card">
+        <h3>Composiciones</h3>
+        <p>Letras nacidas de vivencias reales.</p>
+      </div>
+      <div class="card">
+        <h3>Videos</h3>
+        <p>Momentos visuales para cada historia.</p>
+      </div>
+      <div class="card">
+        <h3>Contacto</h3>
+        <p>Para artistas, productores y colaboraciones.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Mis raíces</h2>
     <p>
-      Mi música nace de historias reales, experiencias de vida y emociones que
-      se transforman en canciones. Cada composición busca transmitir sentimientos
-      de amor, desamor y momentos que forman parte de nuestro camino.
+      Mis raíces nacen de una historia familiar llena de esfuerzo, valores y enseñanzas.
+      El nombre Maravillas representa la fuerza de creer que siempre existe una solución
+      y que no hay imposibles cuando se busca salir adelante.
     </p>
   </section>
+
+  <footer>
+    © 2026 Martín González | Maravillas. Todos los derechos reservados.
+  </footer>
+
 </body>
 </html>
