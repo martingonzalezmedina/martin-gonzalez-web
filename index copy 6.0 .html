@@ -507,7 +507,7 @@
   <div class="music-feature">
     <h3 class="gold">🎵 Canción destacada</h3>
 
-    <h2>Mi Tala</h2>
+    <h2 id="songTitle">Mi Tala</h2>
 
     <p>
         Un homenaje a Tala, Jalisco, la tierra que me vio nacer
@@ -536,7 +536,7 @@
   <li>▶ <a href="javascript:void(0)" onclick="cambiarCancion('Cuando fui de ella', 'audio/cuando-fui-de-ella.mp3')" style="color:white; text-decoration:none;">Cuando fui de ella</a></li>
 <ul style="list-style:none; padding:0; line-height:2;">
 
-  
+
 
 <li>▶ <a href="javascript:void(0)" onclick="cambiarCancion('Con la misma moneda','audio/con-la-misma-moneda.mp3')" style="color:white; text-decoration:none;">Con la misma moneda</a></li>
 
@@ -711,7 +711,7 @@ function toggleLyrics() {
         lyrics.style.display === "block" ? "none" : "block";
 }
 function cambiarCancion(titulo, archivoAudio) {
-    const tituloCancion = document.querySelector(".music-feature h2");
+   const tituloCancion = document.getElementById("songTitle");
     const audioSource = document.querySelector("audio source");
     const audioPlayer = document.querySelector("audio");
 
