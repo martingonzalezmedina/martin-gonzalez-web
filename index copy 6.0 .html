@@ -697,7 +697,16 @@ function toggleLyrics() {
     lyrics.style.display =
         lyrics.style.display === "block" ? "none" : "block";
 }
+function cambiarCancion(titulo, archivoAudio) {
+    const tituloCancion = document.querySelector(".music-feature h2");
+    const audioSource = document.querySelector("audio source");
+    const audioPlayer = document.querySelector("audio");
 
+    tituloCancion.textContent = titulo;
+    audioSource.src = archivoAudio;
+    audioPlayer.load();
+    audioPlayer.play();
+}
 function toggleStory() {
     const lyrics = document.getElementById("lyricsBox");
     const story = document.getElementById("storyBox");
