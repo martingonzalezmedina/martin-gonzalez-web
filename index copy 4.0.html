@@ -511,7 +511,7 @@
        <a href="#" class="btn btn-gold" onclick="toggleLyrics(); return false;">Leer la letra</a>
 <a href="#" class="btn btn-dark" onclick="toggleStory(); return false;">Historia de la canción</a>
     </div>
- <div class="lyrics" id="lyricsBox" style="display:none;">
+ <div class="lyrics" id="storyBox" style="display:none;">
   <h3>Historia de la canción</h3>
   <p>
     “Mi Tala” nació como un homenaje a Tala, Jalisco, la tierra que me vio nacer.
@@ -519,7 +519,7 @@
     su gente hospitalaria y las raíces que siempre llevo conmigo.
   </p>
 </div>
-<div class="lyrics" id="lyricsBox" style="display:none;"></div>
+<div class="lyrics" id="lyricsBox" style="display:none;">
 
 <h3>Mi Tala</h3>
 
@@ -640,6 +640,17 @@ window.addEventListener("scroll", () => {
     topBtn.style.display = "none";
   }
 });
+function toggleLyrics() {
+    const box = document.getElementById("lyricsBox");
+    box.style.display =
+        box.style.display === "block" ? "none" : "block";
+}
+
+function toggleStory() {
+    const box = document.getElementById("storyBox");
+    box.style.display =
+        box.style.display === "block" ? "none" : "block";
+}
 </script>
 
 <button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
