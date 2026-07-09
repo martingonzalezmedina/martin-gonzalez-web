@@ -640,16 +640,14 @@ window.addEventListener("scroll", () => {
     topBtn.style.display = "none";
   }
 });
-function toggleLyrics() {
-    const box = document.getElementById("lyricsBox");
-    box.style.display =
-        box.style.display === "block" ? "none" : "block";
-}
-
 function toggleStory() {
-    const box = document.getElementById("storyBox");
-    box.style.display =
-        box.style.display === "block" ? "none" : "block";
+    const lyrics = document.getElementById("lyricsBox");
+    const story = document.getElementById("storyBox");
+
+    lyrics.style.display = "none";
+
+    story.style.display =
+        story.style.display === "block" ? "none" : "block";
 }
 </script>
 
