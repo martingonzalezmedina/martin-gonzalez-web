@@ -508,10 +508,18 @@
     </audio>
 
     <div class="buttons">
-        <a href="#" class="btn btn-gold" onclick="toggleLyrics(); return false;">Leer la letra</a>
-        <a href="#" class="btn btn-dark">Historia de la canción</a>
+       <a href="#" class="btn btn-gold" onclick="toggleLyrics(); return false;">Leer la letra</a>
+<a href="#" class="btn btn-dark" onclick="toggleStory(); return false;">Historia de la canción</a>
     </div>
-    <div class="lyrics">
+ <div class="lyrics" id="lyricsBox" style="display:none;">
+  <h3>Historia de la canción</h3>
+  <p>
+    “Mi Tala” nació como un homenaje a Tala, Jalisco, la tierra que me vio nacer.
+    Es una canción escrita desde el corazón para reconocer sus paisajes, sus tradiciones,
+    su gente hospitalaria y las raíces que siempre llevo conmigo.
+  </p>
+</div>
+<div class="lyrics" id="lyricsBox" style="display:none;"></div>
 
 <h3>Mi Tala</h3>
 
@@ -522,7 +530,7 @@ Sus cañaverales de verde,<br>
 también sus agaves,<br>
 también su mezzcal.
 </p>
-
+</div>
 </div>
 </div>
   </section>
