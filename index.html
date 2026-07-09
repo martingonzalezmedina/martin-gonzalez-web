@@ -6,9 +6,7 @@
   <title>Martín González | Maravillas</title>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -38,14 +36,12 @@
     .nav-links a {
       color: white;
       text-decoration: none;
-      margin-left: 28px;
-      font-size: 14px;
+      margin-left: 24px;
+      font-size: 13px;
       font-weight: bold;
     }
 
-    .nav-links a:hover {
-      color: #d4af37;
-    }
+    .nav-links a:hover { color: #d4af37; }
 
     .hero {
       min-height: 100vh;
@@ -53,22 +49,20 @@
       align-items: center;
       justify-content: space-between;
       padding: 80px 100px;
-      background: linear-gradient(135deg, #050505 0%, #151515 50%, #000000 100%);
+      background: radial-gradient(circle at center, #1b1b1b 0%, #050505 70%);
     }
 
-    .hero-text {
-      max-width: 560px;
-    }
+    .hero-text { max-width: 580px; }
 
     .hero-text h1 {
-      font-size: 64px;
+      font-size: 66px;
       margin-bottom: 10px;
       color: white;
     }
 
     .hero-text h2 {
       color: #d4af37;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: normal;
       margin-bottom: 20px;
     }
@@ -79,15 +73,13 @@
       color: #ddd;
     }
 
-    .buttons {
-      margin-top: 30px;
-    }
+    .buttons { margin-top: 30px; }
 
     .btn {
       display: inline-block;
-      padding: 14px 24px;
+      padding: 15px 25px;
       margin-right: 12px;
-      border-radius: 5px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
       transition: .4s;
@@ -104,13 +96,8 @@
       border: 2px solid #d4af37;
     }
 
-    .btn-gold:visited {
-      color: #111;
-    }
-
-    .btn-dark:visited {
-      color: white;
-    }
+    .btn-gold:visited { color: #111; }
+    .btn-dark:visited { color: white; }
 
     .btn:hover {
       transform: translateY(-4px);
@@ -118,20 +105,22 @@
     }
 
     .hero-img img {
-      width: 420px;
-      border-radius: 20px;
+      width: 440px;
+      border-radius: 22px;
       border: 2px solid #d4af37;
-      box-shadow: 0 15px 40px rgba(0,0,0,.6);
+      box-shadow: 0 20px 55px rgba(0,0,0,.8);
     }
 
     .section {
-      padding: 70px 80px;
+      padding: 80px 80px;
       text-align: center;
     }
 
+    .section-dark { background: #0f0f0f; }
+
     .section h2 {
       color: #d4af37;
-      font-size: 34px;
+      font-size: 36px;
       margin-bottom: 20px;
     }
 
@@ -154,13 +143,27 @@
     .card {
       background: #151515;
       border: 1px solid #333;
-      width: 220px;
+      width: 230px;
       padding: 30px 20px;
-      border-radius: 12px;
+      border-radius: 14px;
+      transition: .4s;
     }
 
-    .card h3 {
-      color: #d4af37;
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #d4af37;
+      box-shadow: 0 12px 30px rgba(212,175,55,.18);
+    }
+
+    .card h3 { color: #d4af37; }
+
+    .contact-box {
+      max-width: 700px;
+      margin: 30px auto 0;
+      background: #151515;
+      border: 1px solid #333;
+      padding: 30px;
+      border-radius: 14px;
     }
 
     footer {
@@ -169,6 +172,31 @@
       padding: 30px;
       color: #aaa;
       border-top: 1px solid #333;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 25px;
+      }
+
+      .hero-text h1 { font-size: 42px; }
+
+      .hero-img img {
+        width: 85%;
+        margin-top: 35px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links a {
+        margin: 8px;
+        display: inline-block;
+      }
     }
   </style>
 </head>
@@ -220,7 +248,7 @@
     </p>
   </section>
 
-  <section id="musica" class="section">
+  <section id="musica" class="section section-dark">
     <h2>Mi música</h2>
     <div class="cards">
       <div class="card">
@@ -228,9 +256,9 @@
         <p>Historias convertidas en melodía.</p>
       </div>
 
-      <div id="composiciones" class="card">
-        <h3>✍️ Composiciones</h3>
-        <p>Letras nacidas de vivencias reales.</p>
+      <div class="card">
+        <h3>🎧 Demos</h3>
+        <p>Grabaciones creadas desde mi estudio.</p>
       </div>
 
       <div class="card">
@@ -238,20 +266,45 @@
         <p>Momentos visuales para cada historia.</p>
       </div>
 
-      <div id="contacto" class="card">
-        <h3>📩 Contacto</h3>
-        <p>Para artistas, productores y colaboraciones.</p>
+      <div class="card">
+        <h3>📀 Lanzamientos</h3>
+        <p>Próximamente en plataformas digitales.</p>
       </div>
     </div>
   </section>
 
-  <section id="raices" class="section">
+  <section id="composiciones" class="section">
+    <h2>Composiciones</h2>
+    <p>
+      Mi trabajo como compositor nace de historias reales: amor, desamor, recuerdos,
+      sueños y momentos que se convierten en canciones.
+    </p>
+    <p>
+      Cuento con composiciones en diferentes géneros como regional mexicano, balada,
+      pop, cumbia, salsa, mariachi, norteño, dembow, trap y más.
+    </p>
+  </section>
+
+  <section id="raices" class="section section-dark">
     <h2>Mis raíces</h2>
     <p>
       Mis raíces nacen de una historia familiar llena de esfuerzo, valores y enseñanzas.
       El nombre Maravillas representa la fuerza de creer que siempre existe una solución
       y que no hay imposibles cuando se busca salir adelante.
     </p>
+  </section>
+
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>
+      Para colaboraciones, propuestas musicales, artistas, productores o proyectos especiales.
+    </p>
+
+    <div class="contact-box">
+      <p><strong>Martín González | Maravillas</strong></p>
+      <p>Compositor • Artista Independiente • Creador de canciones</p>
+      <p>Próximamente: correo profesional, redes sociales y formulario de contacto.</p>
+    </div>
   </section>
 
   <footer>
