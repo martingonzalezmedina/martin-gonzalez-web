@@ -24,16 +24,18 @@
       justify-content: space-between;
       align-items: center;
       padding: 18px 60px;
-      background: rgba(0,0,0,.85);
-      border-bottom: 1px solid rgba(212,175,55,.25);
+      background: rgba(0,0,0,.88);
+      border-bottom: 1px solid rgba(212,175,55,.35);
       box-sizing: border-box;
+      backdrop-filter: blur(8px);
     }
 
     .logo {
       color: #d4af37;
       font-size: 34px;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      text-shadow: 0 0 18px rgba(212,175,55,.5);
     }
 
     .nav-links a {
@@ -42,6 +44,7 @@
       margin-left: 22px;
       font-size: 13px;
       font-weight: bold;
+      transition: .3s;
     }
 
     .nav-links a:hover { color: #d4af37; }
@@ -54,31 +57,45 @@
       padding: 120px 90px 70px;
       box-sizing: border-box;
       background:
-        radial-gradient(circle at 75% 35%, rgba(212,175,55,.25), transparent 28%),
-        radial-gradient(circle at 20% 80%, rgba(80,40,120,.25), transparent 30%),
+        radial-gradient(circle at 72% 40%, rgba(212,175,55,.28), transparent 28%),
+        radial-gradient(circle at 18% 80%, rgba(120,50,170,.28), transparent 30%),
         linear-gradient(135deg, #050505 0%, #151515 55%, #000 100%);
       overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      background: rgba(212,175,55,.12);
+      filter: blur(90px);
+      border-radius: 50%;
+      right: 120px;
+      top: 140px;
+      animation: glow 5s infinite alternate;
     }
 
     .hero-text {
       max-width: 620px;
       animation: fadeLeft 1.2s ease;
+      position: relative;
+      z-index: 2;
     }
 
     .hero-text h1 {
-      font-size: 70px;
+      font-size: 72px;
       line-height: 1.05;
       margin: 0 0 18px;
-      text-shadow: 0 0 25px rgba(255,255,255,.12);
+      text-shadow: 0 0 25px rgba(255,255,255,.18);
     }
 
-    .gold {
-      color: #d4af37;
-    }
+    .gold { color: #d4af37; }
 
     .hero-text h2 {
       color: #d4af37;
-      font-size: 30px;
+      font-size: 31px;
       margin: 0 0 22px;
       font-weight: normal;
     }
@@ -89,9 +106,7 @@
       color: #ddd;
     }
 
-    .buttons {
-      margin-top: 32px;
-    }
+    .buttons { margin-top: 32px; }
 
     .btn {
       display: inline-block;
@@ -106,7 +121,7 @@
     .btn-gold {
       background: #d4af37;
       color: #111;
-      box-shadow: 0 0 25px rgba(212,175,55,.22);
+      box-shadow: 0 0 25px rgba(212,175,55,.28);
     }
 
     .btn-dark {
@@ -120,43 +135,53 @@
 
     .btn:hover {
       transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(212,175,55,.35);
+      box-shadow: 0 15px 35px rgba(212,175,55,.45);
     }
 
     .hero-img {
       animation: fadeRight 1.2s ease;
+      position: relative;
+      z-index: 2;
     }
 
     .hero-img img {
-      width: 450px;
-      border-radius: 26px;
+      width: 455px;
+      border-radius: 28px;
       border: 3px solid #d4af37;
       box-shadow:
-        0 0 35px rgba(212,175,55,.25),
-        0 25px 60px rgba(0,0,0,.85);
+        0 0 40px rgba(212,175,55,.35),
+        0 25px 70px rgba(0,0,0,.9);
     }
 
     .section {
-      padding: 90px 80px;
+      padding: 95px 80px;
       text-align: center;
     }
 
     .section-dark {
-      background: #101010;
+      background: linear-gradient(180deg, #101010, #070707);
     }
 
     .section h2 {
       color: #d4af37;
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 22px;
     }
 
     .section p {
-      max-width: 920px;
+      max-width: 930px;
       margin: 0 auto 22px;
       font-size: 19px;
       line-height: 1.75;
       color: #ddd;
+    }
+
+    .phrase {
+      font-size: 28px;
+      color: white;
+      font-weight: bold;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .cards {
@@ -164,22 +189,22 @@
       justify-content: center;
       gap: 26px;
       flex-wrap: wrap;
-      margin-top: 38px;
+      margin-top: 40px;
     }
 
     .card {
       background: linear-gradient(145deg, #171717, #0d0d0d);
       border: 1px solid #333;
-      width: 240px;
-      padding: 32px 22px;
-      border-radius: 16px;
+      width: 245px;
+      padding: 34px 24px;
+      border-radius: 18px;
       transition: .4s;
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-10px);
       border-color: #d4af37;
-      box-shadow: 0 18px 35px rgba(212,175,55,.18);
+      box-shadow: 0 18px 38px rgba(212,175,55,.22);
     }
 
     .card h3 {
@@ -192,9 +217,56 @@
       margin: 35px auto 0;
       padding: 35px;
       border-radius: 18px;
-      border: 1px solid rgba(212,175,55,.35);
-      background: rgba(255,255,255,.04);
-      box-shadow: 0 20px 45px rgba(0,0,0,.35);
+      border: 1px solid rgba(212,175,55,.42);
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 20px 45px rgba(0,0,0,.38);
+    }
+
+    .timeline {
+      max-width: 850px;
+      margin: 45px auto 0;
+      text-align: left;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #d4af37;
+      padding: 0 0 35px 25px;
+    }
+
+    .timeline-item h3 {
+      color: #d4af37;
+      margin: 0 0 10px;
+    }
+
+    .music-feature {
+      max-width: 850px;
+      margin: 45px auto 0;
+      background: linear-gradient(145deg, #181818, #090909);
+      border: 1px solid rgba(212,175,55,.4);
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 25px 55px rgba(0,0,0,.45);
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 10px;
+      padding: 13px 18px;
+      color: white;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .socials a:hover {
+      background: #d4af37;
+      color: #111;
     }
 
     footer {
@@ -215,6 +287,11 @@
       to { opacity: 1; transform: translateX(0); }
     }
 
+    @keyframes glow {
+      from { transform: scale(1); opacity: .5; }
+      to { transform: scale(1.15); opacity: .9; }
+    }
+
     @media (max-width: 900px) {
       .navbar {
         flex-direction: column;
@@ -233,14 +310,14 @@
         padding: 150px 25px 70px;
       }
 
-      .hero-text h1 {
-        font-size: 43px;
-      }
+      .hero-text h1 { font-size: 43px; }
 
       .hero-img img {
         width: 88%;
         margin-top: 35px;
       }
+
+      .section { padding: 75px 25px; }
     }
   </style>
 </head>
@@ -279,7 +356,13 @@
     </div>
   </section>
 
-  <section id="historia" class="section">
+  <section class="section">
+    <p class="phrase">
+      “Cada canción guarda una vida. Cada vida merece una canción.”
+    </p>
+  </section>
+
+  <section id="historia" class="section section-dark">
     <h2>Mi historia</h2>
     <p>
       Soy Martín González, artista independiente y compositor. Mi música nace de las experiencias
@@ -287,15 +370,14 @@
       en el corazón.
     </p>
     <p>
-      Cada canción representa una vivencia, un recuerdo o una emoción convertida en melodía.
-      Mi propósito es conectar con las personas a través de letras sinceras.
+      No escribo canciones para llenar álbumes. Escribo historias para quedarse en el corazón.
     </p>
   </section>
 
-  <section id="estudio" class="section section-dark">
+  <section id="estudio" class="section">
     <h2>GLE² Studio</h2>
     <p>
-      GLE² Studio es el espacio donde muchas historias comienzan a transformarse en canciones.
+      El lugar donde las ideas, las vivencias y los sentimientos empiezan a convertirse en música.
     </p>
 
     <div class="highlight-box">
@@ -307,7 +389,7 @@
     </div>
   </section>
 
-  <section id="musica" class="section">
+  <section id="musica" class="section section-dark">
     <h2>Mi música</h2>
     <p>
       Canciones creadas desde vivencias reales, con letras que hablan de amor, desamor,
@@ -335,17 +417,55 @@
         <p>Momentos visuales para cada historia.</p>
       </div>
     </div>
+
+    <div class="music-feature">
+      <h3 class="gold">Canción destacada</h3>
+      <p>
+        Próximamente aquí podrás escuchar una canción seleccionada, leer su historia
+        y conocer el sentimiento que la inspiró.
+      </p>
+      <audio controls>
+        <source src="" type="audio/mpeg">
+        Tu navegador no soporta audio.
+      </audio>
+    </div>
   </section>
 
-  <section id="compositor" class="section section-dark">
+  <section id="compositor" class="section">
     <h2>Compositor</h2>
     <p>
       Cuento con composiciones en distintos géneros: regional mexicano, balada, pop, cumbia,
       salsa, mariachi, norteño, dembow, trap, rap mexicano y más.
     </p>
     <p>
-      Mi objetivo es que cada canción conserve sentimiento, historia y una emoción real.
+      Más de 500 canciones nacidas de historias reales, sentimientos sinceros y vivencias que merecen ser contadas.
     </p>
+  </section>
+
+  <section class="section section-dark">
+    <h2>Camino artístico</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Compositor</h3>
+        <p>Canciones nacidas de experiencias, recuerdos, amor, desamor y sueños.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>GLE² Studio</h3>
+        <p>El espacio donde las canciones empiezan a tomar vida.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Maravillasnov</h3>
+        <p>Una comunidad de canto libre, apoyo, convivencia y música.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Martín González | Maravillas</h3>
+        <p>El proyecto artístico personal donde cada canción cuenta una historia.</p>
+      </div>
+    </div>
   </section>
 
   <section id="maravillasnov" class="section">
@@ -370,6 +490,14 @@
       <p><strong>Martín González | Maravillas</strong></p>
       <p>Compositor • Artista independiente • Creador de canciones</p>
       <p>Próximamente: correo profesional, redes sociales y formulario de contacto.</p>
+
+      <div class="socials">
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Spotify</a>
+      </div>
     </div>
   </section>
 
