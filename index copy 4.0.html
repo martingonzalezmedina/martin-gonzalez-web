@@ -595,9 +595,9 @@ reveals.forEach(section => {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
-const topBtn = document.getElementById("topBtn");
-
 window.addEventListener("scroll", () => {
+  const topBtn = document.getElementById("topBtn");
+
   if (window.scrollY > 400) {
     topBtn.style.display = "block";
   } else {
