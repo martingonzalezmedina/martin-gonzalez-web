@@ -640,7 +640,17 @@ window.addEventListener("scroll", () => {
     topBtn.style.display = "none";
   }
 });
-function togglelyrics() {
+function toggleLyrics() {
+    const lyrics = document.getElementById("lyricsBox");
+    const story = document.getElementById("storyBox");
+
+    story.style.display = "none";
+
+    lyrics.style.display =
+        lyrics.style.display === "block" ? "none" : "block";
+}
+
+function toggleStory() {
     const lyrics = document.getElementById("lyricsBox");
     const story = document.getElementById("storyBox");
 
