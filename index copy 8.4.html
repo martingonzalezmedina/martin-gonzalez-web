@@ -213,6 +213,37 @@
 .gallery img:hover{
     transform:scale(1.08);
     box-shadow:0 25px 60px rgba(212,175,55,.35);
+}.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.92);
+    z-index: 5000;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 18px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 25px 70px rgba(0,0,0,.75);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 48px;
+    cursor: pointer;
 }
 
 .section h2 {
