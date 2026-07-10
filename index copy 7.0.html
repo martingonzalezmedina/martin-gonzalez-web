@@ -533,9 +533,8 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
 </h3>
 
 <ul style="list-style:none; padding:0; line-height:2;">
-  <ul style="list-style:none; padding:0; line-height:2;">
 
-  <li>▶ <a href="javascript:void(0)"
+ <li><a id="song1" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Cuando fui de ella',
       'audio/cuando-fui-de-ella.mp3',
@@ -545,7 +544,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     Cuando fui de ella
   </a></li>
 
-  <li>▶ <a href="javascript:void(0)"
+  <li><a id="song2" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Con la misma moneda',
       'audio/con-la-misma-moneda.mp3',
@@ -555,7 +554,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     Con la misma moneda
   </a></li>
 
-  <li>▶ <a href="javascript:void(0)"
+ <li><a id="song3" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Mi Pantalón',
       'audio/mi-pantalon.mp3',
@@ -565,7 +564,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     Mi Pantalón
   </a></li>
 
-  <li>▶ <a href="javascript:void(0)"
+ <li><a id="song4" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Reyna de mis recuerdos',
       'audio/reyna-de-mis-recuerdos.wav',
@@ -575,7 +574,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     Reyna de mis recuerdos
   </a></li>
 
-  <li>▶ <a href="javascript:void(0)"
+  <li><a id="song5" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Norma, My Dear',
       'audio/norma-my-dear.mp3',
@@ -585,7 +584,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     Norma, My Dear
   </a></li>
 
-  <li>▶ <a href="javascript:void(0)"
+   <li><a id="song6" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Pagando mis errores',
       'audio/pagando-por-mis-errores.mp3',
@@ -593,9 +592,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     )"
     style="color:white; text-decoration:none;">
     Pagando mis errores
-  </a></li>
-
-  <li>▶ <a href="javascript:void(0)"
+  <li><a id="song6" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Tal para cual',
       'audio/tal-para-cual.mp3',
@@ -605,7 +602,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     Tal para cual
   </a></li>
 
-  <li>▶ <a href="javascript:void(0)"
+  <li><a id="song7" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Estamos a mano',
       'audio/estamos-a-mano.mp3',
@@ -615,7 +612,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
     Estamos a mano
   </a></li>
 
-  <li>▶ <a href="javascript:void(0)"
+  <li><a id="song8" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Ya Último',
       'audio/ya-ultimo.mp3',
@@ -788,6 +785,18 @@ function cambiarCancion(titulo, archivoAudio, descripcionTexto) {
 
     tituloCancion.textContent = titulo;
     descripcionCancion.textContent = descripcionTexto;
+    document.querySelectorAll('#musica ul a').forEach(link => {
+    link.style.color = "white";
+    link.style.fontWeight = "normal";
+});
+
+const enlace = [...document.querySelectorAll('#musica ul a')]
+    .find(a => a.textContent.trim() === titulo);
+
+if (enlace) {
+    enlace.style.color = "#d4af37";
+    enlace.style.fontWeight = "bold";
+}
     audioSource.src = archivoAudio;
     audioPlayer.load();
     audioPlayer.play();
