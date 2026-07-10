@@ -391,7 +391,9 @@
     }
 
     .socials a {
-      display: inline-block;
+    display: inline-flex;
+    align-items: center;
+gap: 7px;
       margin: 10px;
       padding: 13px 18px;
       color: white;
@@ -399,11 +401,15 @@
       border-radius: 8px;
       text-decoration: none;
       transition: .3s;
+      font-size: 18px;
+
     }
 
     .socials a:hover {
       background: #d4af37;
       color: #111;
+      transform: translateY(-4px) scale(1.04);
+box-shadow: 0 12px 28px rgba(212,175,55,.35);
     }
 
     footer {
