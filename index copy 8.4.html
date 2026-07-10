@@ -931,6 +931,31 @@ function toggleStory() {
     story.style.display =
         story.style.display === "block" ? "none" : "block";
 }
+  
+// 👇 AQUÍ PEGA EL NUEVO CÓDIGO
+
+const galleryImages = document.querySelectorAll(".gallery img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+galleryImages.forEach((image) => {
+    image.addEventListener("click", () => {
+        lightboxImg.src = image.src;
+        lightbox.classList.add("active");
+    });
+});
+
+lightboxClose.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+});
+
+lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+        lightbox.classList.remove("active");
+    }
+});
+
 </script>
 
 <button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
