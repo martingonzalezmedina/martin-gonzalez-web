@@ -48,7 +48,16 @@
     }
 
     .nav-links a:hover { color: #d4af37; }
+#musica ul a {
+  display: inline-block;
+  transition: all .3s ease;
+}
 
+#musica ul a:hover {
+  color: #d4af37 !important;
+  transform: scale(1.06);
+  text-shadow: 0 0 10px rgba(212,175,55,.7);
+}
     .hero {
       min-height: 100vh;
       display: flex;
@@ -532,7 +541,8 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
 🎵 Catálogo Musical
 </h3>
 
-<ul style="list-style:none; padding:0; line-height:2;">
+enlace.style.textShadow = "0 0 12px rgba(212,175,55,.8)";
+enlace.style.display = "inline-block";
 
  <li><a id="song1" href="javascript:void(0)"
     onclick="cambiarCancion(
