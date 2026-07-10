@@ -541,7 +541,7 @@ Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en e
 🎵 Catálogo Musical
 </h3>
 
-
+<ul style="list-style:none; padding:0; line-height:2.8;"></ul>
  <li><a id="song1" href="javascript:void(0)"
     onclick="cambiarCancion(
       'Cuando fui de ella',
@@ -800,12 +800,8 @@ function cambiarCancion(titulo, archivoAudio, descripcionTexto) {
     link.style.textShadow = "none";
 link.style.display = "inline-block";
 });
-const enlace = document.getElementById(
-    "song" + (
-        [...document.querySelectorAll('#musica ul a')]
-        .findIndex(a => a.textContent.trim() === titulo) + 1
-    )
-);
+
+const enlace = [...document.querySelectorAll('#musica ul a')]
     .find(a => a.textContent.trim() === titulo);
 
 if (enlace) {
