@@ -800,8 +800,12 @@ function cambiarCancion(titulo, archivoAudio, descripcionTexto) {
     link.style.textShadow = "none";
 link.style.display = "inline-block";
 });
-
-const enlace = [...document.querySelectorAll('#musica ul a')]
+const enlace = document.getElementById(
+    "song" + (
+        [...document.querySelectorAll('#musica ul a')]
+        .findIndex(a => a.textContent.trim() === titulo) + 1
+    )
+);
     .find(a => a.textContent.trim() === titulo);
 
 if (enlace) {
