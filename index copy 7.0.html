@@ -512,7 +512,7 @@
     <p id="descripcionCancion">
 Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en el corazón.
 </p>
-    </p>
+  
 
     <p>
         <strong>Autor:</strong> Martín González<br>
@@ -710,8 +710,9 @@ function toggleLyrics() {
     lyrics.style.display =
         lyrics.style.display === "block" ? "none" : "block";
 }
-function cambiarCancion(titulo, archivoAudio) {
+function cambiarCancion(titulo, archivoAudio, descripcionTexto) {
    const tituloCancion = document.getElementById("songTitle");
+   const descripcionCancion = document.getElementById("descripcionCancion");
     const audioSource = document.querySelector("audio source");
     const audioPlayer = document.querySelector("audio");
 
