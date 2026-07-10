@@ -787,6 +787,7 @@ function cambiarCancion(titulo, archivoAudio, descripcionTexto) {
     const audioPlayer = document.querySelector("audio");
 
     tituloCancion.textContent = titulo;
+    descripcionCancion.textContent = descripcionTexto;
     audioSource.src = archivoAudio;
     audioPlayer.load();
     audioPlayer.play();
