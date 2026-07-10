@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martín González | Maravillas</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050505;
+      color: white;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 60px;
+      background: rgba(0,0,0,.88);
+      border-bottom: 1px solid rgba(212,175,55,.35);
+      box-sizing: border-box;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      color: #d4af37;
+      font-size: 34px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-shadow: 0 0 18px rgba(212,175,55,.5);
+    }
+    .logo img {
+    height: 160px;
+    width: auto;
+    margin-left: 10px;
+}
+  
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .nav-links a:hover { color: #d4af37; }
+#musica ul a {
+  display: inline-block;
+  transition: all .3s ease;
+}
+
+#musica ul a:hover {
+  color: #d4af37 !important;
+  transform: scale(1.06);
+  text-shadow: 0 0 10px rgba(212,175,55,.7);
+}
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 120px 90px 70px;
+      box-sizing: border-box;
+      background:
+        radial-gradient(circle at 72% 40%, rgba(212,175,55,.28), transparent 28%),
+        radial-gradient(circle at 18% 80%, rgba(120,50,170,.28), transparent 30%),
+        linear-gradient(135deg, #050505 0%, #151515 55%, #000 100%);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 450px;
+      background: rgba(212,175,55,.12);
+      filter: blur(90px);
+      border-radius: 50%;
+      right: 120px;
+      top: 140px;
+      animation: glow 5s infinite alternate;
+    }
+
+    .hero-text {
+      max-width: 620px;
+      animation: fadeLeft 1.2s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text h1 {
+      font-size: 72px;
+      line-height: 1.05;
+      margin: 0 0 18px;
+      text-shadow: 0 0 25px rgba(255,255,255,.18);
+    }
+
+    .gold { color: #d4af37; }
+
+    .hero-text h2 {
+      color: #d4af37;
+      font-size: 31px;
+      margin: 0 0 22px;
+      font-weight: normal;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .buttons { margin-top: 32px; }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 26px;
+      margin-right: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .4s;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #111;
+      box-shadow: 0 0 25px rgba(212,175,55,.28);
+    }
+
+    .btn-dark {
+      color: white;
+      border: 2px solid #d4af37;
+      background: rgba(0,0,0,.35);
+    }
+
+    .btn-gold:visited { color: #111; }
+    .btn-dark:visited { color: white; }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(212,175,55,.45);
+    }
+
+    .hero-img {
+      animation: fadeRight 1.2s ease;
+      position: relative;
+      z-index: 2;
+      margin-top: 50px;
+      transform: translateX(-30px);
+    }
+
+    .hero-img img {
+      width: 380px;
+      border-radius: 28px;
+      border: 3px solid #d4af37;
+      box-shadow:
+      0 0 25px rgba(212,175,55,.22),
+0 15px 40px rgba(0,0,0,.25);
+    }
+
+    .section {
+  padding: 130px 80px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(212,175,55,.45),
+    transparent
+  );
+}.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+    margin-top:50px;
+}
+
+.gallery img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    border-radius:18px;
+    border:2px solid #d4af37;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    transition:all .35s ease;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+    box-shadow:0 25px 60px rgba(212,175,55,.35);
+}
+
+.section h2 {
+  font-size: 52px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.section p {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 22px;
+  font-size: 20px;
+  line-height: 1.9;
+  color: #ddd;
+}
+
+    .section-dark {
+      background: linear-gradient(180deg, #101010, #070707);
+    }
+
+    .section h2 {
+      color: #d4af37;
+      font-size: 42px;
+      margin-bottom: 22px;
+    }
+
+    .section p {
+      max-width: 930px;
+      margin: 0 auto 22px;
+      font-size: 19px;
+      line-height: 1.75;
+      color: #ddd;
+    }
+
+    .phrase {
+      font-size: 28px;
+      color: white;
+      font-weight: bold;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #171717, #0d0d0d);
+      border: 1px solid #333;
+      width: 245px;
+      padding: 34px 24px;
+      border-radius: 18px;
+      transition: .4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: #d4af37;
+      box-shadow: 0 18px 38px rgba(212,175,55,.22)
+      ;scale: 1.05;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      font-size: 23px;
+    }
+
+    .highlight-box {
+      max-width: 850px;
+      margin: 35px auto 0;
+      padding: 35px;
+      border-radius: 18px;
+      border: 1px solid rgba(212,175,55,.42);
+      background: rgba(255,255,255,.045);
+      box-shadow: 0 20px 45px rgba(0,0,0,.38);
+    }
+
+    .timeline {
+      max-width: 850px;
+      margin: 45px auto 0;
+      text-align: left;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #d4af37;
+      padding: 0 0 35px 25px;
+    }
+
+    .timeline-item h3 {
+      color: #d4af37;
+      margin: 0 0 10px;
+    }
+
+    .music-feature {
+      max-width: 850px;
+      margin: 45px auto 0;
+      background: linear-gradient(145deg, #181818, #090909);
+      border: 1px solid rgba(212,175,55,.4);
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 25px 55px rgba(0,0,0,.45);
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      display: inline-block;
+      margin: 10px;
+      padding: 13px 18px;
+      color: white;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .socials a:hover {
+      background: #d4af37;
+      color: #111;
+    }
+
+    footer {
+      background: #050505;
+      text-align: center;
+      padding: 30px;
+      color: #aaa;
+      border-top: 1px solid #333;
+    }
+    #topBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #111;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 8px 25px rgba(212,175,55,.35);
+    transition: .3s;
+    z-index: 999;
+}
+
+#topBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(212,175,55,.55);
+}
+
+    @keyframes fadeLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes glow {
+      from { transform: scale(1); opacity: .5; }
+      to { transform: scale(1.15); opacity: .9; }
+    }
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all .9s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        gap: 14px;
+        padding: 16px 20px;
+      }
+
+      .nav-links a {
+        display: inline-block;
+        margin: 6px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 150px 25px 70px;
+      }
+
+      .hero-text h1 { font-size: 43px; }
+
+      .hero-img img {
+        width: 88%;
+        margin-top: 35px;
+      }
+
+      .section { padding: 75px 25px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+  <div class="logo">
+    <img src="logos/gle2-header.png" alt="GLE2 Estudio">
+</div>
+    <div class="nav-links">
+      <a href="#inicio">INICIO</a>
+      <a href="#historia">HISTORIA</a>
+      <a href="#estudio">GLE² STUDIO</a>
+      <a href="#musica">MÚSICA</a>
+      <a href="#maravillasnov">MARAVILLASNOV</a>
+      <a href="#contacto">CONTACTO</a>
+    </div>
+  </nav>
+
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1>Martín González <span class="gold">| Maravillas</span></h1>
+      <h2>Cada canción nace de una historia. Cada historia merece ser cantada.</h2>
+      <p>
+  
+    
+
+      <div class="buttons">
+        <a href="#musica" class="btn btn-gold">Escuchar mi música</a>
+        <a href="#historia" class="btn btn-dark">Conocer mi historia</a>
+      </div>
+    </div>
+
+    <div class="hero-img">
+    <img src="fotos/IMG_5775.jpeg" alt="Martín González">
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="phrase">
+      “Cada canción guarda una vida. Cada vida merece una canción.”
+    </p>
+  </section>
+
+  <section id="historia" class="section section-dark reveal">
+   <h2>Mi historia, contada en canciones</h2>
+
+<p>
+Soy Martín González. Más que escribir canciones, escribo vivencias. Cada melodía nace de una experiencia, de un sentimiento o de una historia que dejó una huella en el corazón. Mi propósito no es solamente hacer música, sino convertir emociones reales en canciones que acompañen a las personas en distintos momentos de su vida.
+</p>
+
+<p>
+No escribo canciones para llenar álbumes. Escribo historias para quedarse en el corazón, porque creo que una buena canción puede acompañar a una persona toda la vida.
+</p>
+  </section>
+
+<section id="estudio" class="section reveal">
+ <h2>GLE² Studio</h2>
+ <p>
+Más que un estudio de grabación, GLE² Studio es el lugar donde las historias encuentran su sonido. Aquí, cada idea, cada emoción y cada vivencia se transforma en una canción con identidad propia.
+</p>
+
+<p>
+Creemos que la música nace del corazón. Por eso cuidamos cada detalle del proceso creativo, desde la composición hasta la producción final, buscando que cada obra conserve su esencia y conecte con quien la escucha.
+</p>
+
+    <div class="highlight-box">
+      <p>
+        La letra <strong>G</strong> representa el apellido González. El cuadro simboliza el número dos:
+        Norma y Martín, dos González uniendo esfuerzo, creatividad y sueños para construir un lugar
+        donde la música nace desde el corazón.
+      </p>
+    </div>
+  </section>
+
+  <section id="musica" class="section section-dark">
+    <h2>Mi música</h2>
+    <p>
+      Canciones creadas desde vivencias reales, con letras que hablan de amor, desamor,
+      recuerdos, sueños y momentos de la vida.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>🎵 Canciones</h3>
+        <p>Historias convertidas en melodía.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎧 Demos</h3>
+        <p>Grabaciones creadas desde mi estudio.</p>
+      </div>
+
+      <div class="card">
+        <h3>📀 Lanzamientos</h3>
+        <p>Próximamente en plataformas digitales.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎬 Videos</h3>
+        <p>Momentos visuales para cada historia.</p>
+      </div>
+    </div>
+
+  <div class="music-feature">
+    <h3 class="gold">🎵 Canción destacada</h3>
+
+    <h2 id="songTitle">Mi Tala</h2>
+
+    <p id="descripcionCancion">
+Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en el corazón.
+</p>
+  
+
+    <p>
+        <strong>Autor:</strong> Martín González<br>
+        <strong>Compositor:</strong> Martín González<br>
+        <strong>Estudio:</strong> GLE² Studio
+    </p>
+
+    <audio controls>
+        <source src="audio/Tapita.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+<video controls width="100%" style="border-radius:12px; margin-top:20px;">
+  <source src="videos/mi-tala.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+</video>
+<h3 style="margin-top:30px; color:#d4af37;">
+🎵 Catálogo Musical
+</h3>
+
+<ul style="list-style:none; padding:0; line-height:2.8;">
+ <li><a id="song1" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Cuando fui de ella',
+      'audio/cuando-fui-de-ella.mp3',
+      'Una historia de amor, recuerdos y sentimientos que permanecen aun después de la separación.'
+    )"
+    style="color:white; text-decoration:none;">
+    Cuando fui de ella
+  </a></li>
+
+  <li><a id="song2" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Con la misma moneda',
+      'audio/con-la-misma-moneda.mp3',
+      'Una historia sobre el amor, el orgullo y las consecuencias de pagar con la misma moneda.'
+    )"
+    style="color:white; text-decoration:none;">
+    Con la misma moneda
+  </a></li>
+
+ <li><a id="song3" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Mi Pantalón',
+      'audio/mi-pantalon.mp3',
+      'Una canción con personalidad, recuerdos y una historia cotidiana convertida en música.'
+    )"
+    style="color:white; text-decoration:none;">
+    Mi Pantalón
+  </a></li>
+
+ <li><a id="song4" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Reyna de mis recuerdos',
+      'audio/reyna-de-mis-recuerdos.wav',
+      'Un homenaje a esa persona que permanece como reina de los recuerdos y del corazón.'
+    )"
+    style="color:white; text-decoration:none;">
+    Reyna de mis recuerdos
+  </a></li>
+
+  <li><a id="song5" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Norma, My Dear',
+      'audio/norma-my-dear.mp3',
+      'Una canción especial dedicada con amor, admiración y gratitud.'
+    )"
+    style="color:white; text-decoration:none;">
+    Norma, My Dear
+  </a></li>
+
+   <li><a id="song6" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Pagando mis errores',
+      'audio/pagando-por-mis-errores.mp3',
+      'Una reflexión sobre las decisiones, el arrepentimiento y el precio de nuestros errores.'
+    )"
+    style="color:white; text-decoration:none;">
+    Pagando mis errores
+  <li><a id="song6" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Tal para cual',
+      'audio/tal-para-cual.mp3',
+      'La historia de dos personas que se reconocen como iguales, con virtudes y defectos.'
+    )"
+    style="color:white; text-decoration:none;">
+    Tal para cual
+  </a></li>
+
+  <li><a id="song7" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Estamos a mano',
+      'audio/estamos-a-mano.mp3',
+      'Una canción sobre cerrar cuentas emocionales y dejar atrás lo que alguna vez dolió.'
+    )"
+    style="color:white; text-decoration:none;">
+    Estamos a mano
+  </a></li>
+
+  <li><a id="song8" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Ya Último',
+      'audio/ya-ultimo.mp3',
+      'Una despedida definitiva: la última palabra después de una historia que llegó a su final.'
+    )"
+    style="color:white; text-decoration:none;">
+    Ya Último
+  </a></li>
+
+</ul>
+    <div class="buttons">
+      <a href="https://open.spotify.com/intl-es/track/1PBJ0rCNeQKq8XVZe03cWE?si=3991b6c5bc8149e1" target="_blank" class="btn btn-green">🟢 Escuchar en Spotify</a>
+<a href="javascript:void(0)" class="btn btn-gold" onclick="toggleLyrics();">Leer la letra</a>
+<a href="javascript:void(0)" class="btn btn-dark" onclick="toggleStory();">Historia de la canción</a>
+    </div>
+ <div class="lyrics" id="storyBox" style="display:none;">
+  <h3>Historia de la canción</h3>
+  <p>
+    “Mi Tala” nació como un homenaje a Tala, Jalisco, la tierra que me vio nacer.
+    Es una canción escrita desde el corazón para reconocer sus paisajes, sus tradiciones,
+    su gente hospitalaria y las raíces que siempre llevo conmigo.
+  </p>
+</div>
+<div class="lyrics" id="lyricsBox" style="display:none;">
+
+<h3>Mi Tala</h3>
+
+<p>
+Tala te conecta al cielo,<br>
+solo Dios sabe dónde está.<br>
+Sus cañaverales de verde,<br>
+también sus agaves,<br>
+también su mezzcal.
+</p>
+</div>
+</div>
+</div>
+  </section>
+
+  <section id="compositor" class="section">
+    <h2>Compositor</h2>
+    <p>
+      Cuento con composiciones en distintos géneros: regional mexicano, balada, pop, cumbia,
+      salsa, mariachi, norteño, dembow, trap, rap mexicano y más.
+    </p>
+    <p>
+      Más de 500 canciones nacidas de historias reales, sentimientos sinceros y vivencias que merecen ser contadas.
+    </p>
+  </section>
+
+  <section class="section section-dark">
+    <h2>Camino artístico</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Compositor</h3>
+        <p>Canciones nacidas de experiencias, recuerdos, amor, desamor y sueños.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>GLE² Studio</h3>
+        <p>El espacio donde las canciones empiezan a tomar vida.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Maravillasnov</h3>
+        <p>Una comunidad de canto libre, apoyo, convivencia y música.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Martín González | Maravillas</h3>
+        <p>El proyecto artístico personal donde cada canción cuenta una historia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="maravillasnov" class="section">
+    <h2>Maravillasnov</h2>
+    <p>
+      Maravillasnov es una comunidad nacida de la música. Un espacio donde las personas pueden cantar,
+      convivir, perder el miedo y compartir su voz.
+    </p>
+    <p>
+      Durante este camino hemos realizado dinámicas, concursos, regalos y noches de canto libre,
+      siempre con la intención de apoyar, motivar y unir a las personas a través de la música.
+    </p>
+  </section>
+
+  <section id="galeria" class="section section-dark">
+  <h2>Galería</h2>
+  <p>Momentos, retratos y escenas del camino artístico de Martín González.</p>
+
+  <div class="gallery">
+    <img src="fotos/foto1.jpeg" alt="Martín González">
+   <img src="fotos/foto2.jpeg" alt="Martín González">
+<img src="fotos/foto3.jpeg" alt="Martín González">
+<img src="fotos/foto4.jpeg" alt="Martín González">
+  </div>
+</section>
+  <section id="contacto" class="section section-dark">
+    <h2>Contacto</h2>
+    <p>
+      Para colaboraciones, propuestas musicales, artistas, productores o proyectos especiales.
+    </p>
+
+    <div class="highlight-box">
+      <p><strong>Martín González | Maravillas</strong></p>
+      <p>Compositor • Artista independiente • Creador de canciones</p>
+      <p>Próximamente: correo profesional, redes sociales y formulario de contacto.</p>
+
+      <div class="socials">
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Spotify</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Martín González | Maravillas. Todos los derechos reservados.
+  </footer>
+
+
+  <script>
+const reveals = document.querySelectorAll(".section");
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+
+  reveals.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+
+    if (top < windowHeight - 100) {
+      section.classList.add("active");
+    }
+  });
+}
+
+reveals.forEach(section => {
+  section.classList.add("reveal");
+});
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+window.addEventListener("scroll", () => {
+  const topBtn = document.getElementById("topBtn");
+
+  if (window.scrollY > 400) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+function toggleLyrics() {
+    const lyrics = document.getElementById("lyricsBox");
+    const story = document.getElementById("storyBox");
+
+    story.style.display = "none";
+
+    lyrics.style.display =
+        lyrics.style.display === "block" ? "none" : "block";
+}
+function cambiarCancion(titulo, archivoAudio, descripcionTexto) {
+   const tituloCancion = document.getElementById("songTitle");
+   const descripcionCancion = document.getElementById("descripcionCancion");
+    const audioSource = document.querySelector("audio source");
+    const audioPlayer = document.querySelector("audio");
+
+    tituloCancion.textContent = titulo;
+    descripcionCancion.textContent = descripcionTexto;
+    document.querySelectorAll('#musica ul a').forEach(link => {
+    link.style.color = "white";
+    link.style.transform = "scale(1)";
+    link.style.fontWeight = "normal";
+    link.style.textShadow = "none";
+link.style.display = "inline-block";
+});
+
+const enlace = [...document.querySelectorAll('#musica ul a')]
+    .find(a => a.textContent.trim() === titulo);
+
+if (enlace) {
+    enlace.style.color = "#d4af37";
+    enlace.style.transform = "scale(1.08)";
+    enlace.style.fontWeight = "bold";
+    enlace.style.textShadow = "0 0 12px rgba(212,175,55,.8)";
+enlace.style.display = "inline-block";
+}
+    audioSource.src = archivoAudio;
+    audioPlayer.load();
+    audioPlayer.play();
+}
+function toggleStory() {
+    const lyrics = document.getElementById("lyricsBox");
+    const story = document.getElementById("storyBox");
+
+    lyrics.style.display = "none";
+
+    story.style.display =
+        story.style.display === "block" ? "none" : "block";
+}
+</script>
+
+<button id="topBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+↑
+</button>
+
+</body>
+</html>
