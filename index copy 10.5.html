@@ -669,6 +669,39 @@ section[id] {
     margin: 18px auto 0;
     background: #d4af37;
     box-shadow: 0 0 12px rgba(212,175,55,.65);
+}.featured-description {
+  max-width: 720px;
+  margin: 0 auto 28px !important;
+  color: #dddddd;
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.featured-credits {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 28px auto 10px;
+}
+
+.featured-credits span {
+  min-width: 175px;
+  padding: 16px 20px;
+  border: 1px solid rgba(212,175,55,.30);
+  border-radius: 12px;
+  background: rgba(255,255,255,.035);
+  color: #eeeeee;
+  line-height: 1.5;
+}
+
+.featured-credits strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #d4af37;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 @media (max-width: 900px) {
       .navbar {
@@ -934,23 +967,7 @@ section[id] {
       </div>
     </div>
 
-  <div class="music-feature">
- <div class="featured-heading">
-    <span class="featured-label">CANCIÓN DESTACADA</span>
-    <h2 id="songTitle">Mi Tala</h2>
-    <span class="featured-line"></span>
-</div>
-
-    <p id="descripcionCancion">
-Un homenaje a Tala, Jalisco, la tierra que me vio nacer y que siempre llevo en el corazón.
-</p>
-  
-
-    <p>
-        <strong>Autor:</strong> Martín González<br>
-        <strong>Compositor:</strong> Martín González<br>
-        <strong>Estudio:</strong> GLE² Studio
-    </p>
+>
 
     <audio controls style="width:100%; margin-top:20px;">
         <source src="audio/Tapita.mp3" type="audio/mpeg">
