@@ -46,19 +46,31 @@
 }
   
 
-   .nav-links a {
+.nav-links a {
+  display: inline-block;
   color: white;
   text-decoration: none;
-  margin-left: 30px;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: .5px;
-  transition: all .3s ease;
+  margin-left: 10px;
+  padding: 10px 13px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .4px;
+  transition:
+    color .3s ease,
+    border-color .3s ease,
+    background .3s ease,
+    box-shadow .3s ease,
+    transform .3s ease;
 }
 
 .nav-links a:hover {
   color: #d4af37;
-  text-shadow: 0 0 12px rgba(212,175,55,.6);
+  border-color: rgba(212,175,55,.75);
+  background: rgba(212,175,55,.08);
+  box-shadow: 0 0 18px rgba(212,175,55,.18);
+  transform: translateY(-2px);
 }
 
     .nav-links a:hover { color: #d4af37; }
