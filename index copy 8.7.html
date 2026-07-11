@@ -479,6 +479,23 @@ box-shadow: 0 12px 28px rgba(212,175,55,.35);
 section[id] {
     scroll-margin-top: 140px;
 }
+#galeria .gallery {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 1100px !important;
+    margin: 40px auto 0 !important;
+}
+
+#galeria .gallery img {
+    display: block !important;
+    width: 100% !important;
+    height: 280px !important;
+    object-fit: cover !important;
+    border-radius: 18px !important;
+    cursor: pointer !important;
+}
 @media (max-width: 900px) {
       .navbar {
         flex-direction: column;
