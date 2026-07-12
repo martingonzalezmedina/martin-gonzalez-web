@@ -182,38 +182,7 @@
       box-sizing: border-box;
       text-align: center;
       background: #080808;
-      .bio-chapter-quote {
-    max-width: 760px;
-    margin: 40px auto 0;
-    padding: 25px 30px;
-    color: #d4af37;
-    font-size: 23px;
-    line-height: 1.7;
-    font-style: italic;
-    border-left: 3px solid #d4af37;
-    background: rgba(212,175,55,.06);
-}.bio-photo{
-    text-align:center;
-    margin:30px 0;
-}
-
-.bio-photo img{
-  background:#111;
-padding:8px;
-    width:240px;
-    max-width:100%;
-    height:auto;
-    border-radius:14px;
-    border:4px solid #d4af37;
-    box-shadow:0 12px 30px rgba(0,0,0,.45);
-}
-
-.bio-caption{
-    margin-top:15px;
-    color:#cccccc;
-    font-size:16px;
-    font-style:italic;
-}
+      scroll-margin-top: 80px;
     }
 
     .bio-start h2 {
@@ -224,10 +193,45 @@ padding:8px;
 
     .bio-start p {
       max-width: 850px;
-      margin: 0 auto;
+      margin: 0 auto 26px;
       color: #dddddd;
       font-size: 20px;
       line-height: 1.9;
+    }
+
+    .bio-chapter-quote {
+      max-width: 760px;
+      margin: 40px auto 0;
+      padding: 25px 30px;
+      color: #d4af37;
+      font-size: 23px;
+      line-height: 1.7;
+      font-style: italic;
+      border-left: 3px solid #d4af37;
+      background: rgba(212, 175, 55, .06);
+    }
+
+    .bio-photo {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .bio-photo img {
+      width: 240px;
+      max-width: 100%;
+      height: auto;
+      padding: 8px;
+      background: #111111;
+      border-radius: 14px;
+      border: 4px solid #d4af37;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .45);
+    }
+
+    .bio-caption {
+      margin-top: 15px !important;
+      color: #cccccc !important;
+      font-size: 16px !important;
+      font-style: italic;
     }
 
     @media (max-width: 800px) {
@@ -255,6 +259,18 @@ padding:8px;
       .bio-quote {
         font-size: 19px;
       }
+
+      .bio-start {
+        padding: 85px 20px;
+      }
+
+      .bio-start h2 {
+        font-size: 34px;
+      }
+
+      .bio-start p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
@@ -262,32 +278,21 @@ padding:8px;
 <body>
 
   <nav class="bio-navbar">
-    <div class="bio-logo">
-      MARTÍN GONZÁLEZ
-    </div>
-
-  <a href="index%20copy%2010.8.html">
-  </a>
-  ← Volver al sitio
-</a>
+    <div class="bio-logo">MARTÍN GONZÁLEZ</div>
+    <a href="index.html">← Volver al sitio</a>
   </nav>
 
   <header class="bio-hero">
-
     <div class="bio-hero-content">
 
-      <span class="bio-label">
-        Biografía Oficial
-      </span>
+      <span class="bio-label">Biografía Oficial</span>
 
       <h1>
         Martín González
         <span>| Maravillas</span>
       </h1>
 
-      <h2>
-        Cada canción tiene una historia. Esta es la mía.
-      </h2>
+      <h2>Cada canción tiene una historia. Esta es la mía.</h2>
 
       <p class="bio-quote">
         “Algunas personas escriben canciones.
@@ -304,47 +309,44 @@ padding:8px;
         Cada canción guarda un fragmento de ese camino.
       </p>
 
-      <a href="#comenzar" class="bio-button">
-        Comenzar mi historia
-      </a>
+      <a href="#comenzar" class="bio-button">Comenzar mi historia</a>
 
     </div>
-
   </header>
 
- <section id="comenzar" class="bio-start">
+  <section id="comenzar" class="bio-start">
 
-  <span class="bio-label">Capítulo 1</span>
+    <span class="bio-label">Capítulo 1</span>
 
-  <h2>Mis raíces</h2>
-<div class="bio-photo">
-    <img src="fotos/martin-13.jpeg" alt="Martín González a los 13 años">
-    <p class="bio-caption">
+    <h2>Mis raíces</h2>
+
+    <div class="bio-photo">
+      <img src="fotos/martin-13.jpeg" alt="Martín González a los 13 años">
+      <p class="bio-caption">
         Martín González, a los 13 años. Aún no sabía que las experiencias que estaba viviendo algún día se convertirían en canciones.
+      </p>
+    </div>
+
+    <span class="bio-line"></span>
+
+    <p>
+      Nací en Tala, Jalisco, un pueblo de gente trabajadora donde aprendí que los sueños no se heredan: se construyen. Crecí rodeado de valores, sacrificios y esperanza.
+      Desde muy pequeño entendí que cada experiencia, buena o difícil, iba dejando una enseñanza que algún día se convertiría en parte de mi historia.
     </p>
-</div>
-  <span class="bio-line"></span>
 
-<p>
-Nací en Tala, Jalisco, un pueblo de gente trabajadora donde aprendí que los sueños no se heredan: se construyen. Crecí rodeado de valores, sacrificios y esperanza. 
-Desde muy pequeño entendí que cada experiencia, buena o difícil, iba dejando una enseñanza que algún día se convertiría en parte de mi historia.
-</<p>
-En aquellos primeros años aprendí que el esfuerzo siempre da frutos. Vi trabajar a mi familia con dedicación y entendí que los grandes sueños comienzan con pequeños pasos. Sin saberlo, cada una de esas experiencias estaba formando la persona y el compositor que llegaría a ser años después.
-</p>
-  <p>
-    Antes de conocer los estudios de grabación, los escenarios o la vida
-    artística, conocí el trabajo, las pérdidas y los sueños. Cada una de esas
-    vivencias fue formando mi sensibilidad y, con el paso del tiempo, se
-    convirtió en la materia prima de mis canciones.
-  </p>
+    <p>
+      En aquellos primeros años aprendí que el esfuerzo siempre da frutos. Vi trabajar a mi familia con dedicación y entendí que los grandes sueños comienzan con pequeños pasos. Sin saberlo, cada una de esas experiencias estaba formando la persona y el compositor que llegaría a ser años después.
+    </p>
 
-  <blockquote class="bio-chapter-quote">
-    “Las raíces no solo nos dicen de dónde venimos; también nos recuerdan
-    por qué seguimos adelante.”
-  </blockquote>
+    <p>
+      Antes de conocer los estudios de grabación, los escenarios o la vida artística, conocí el trabajo, las pérdidas y los sueños. Cada una de esas vivencias fue formando mi sensibilidad y, con el paso del tiempo, se convirtió en la materia prima de mis canciones.
+    </p>
 
-</section>
+    <blockquote class="bio-chapter-quote">
+      “Las raíces no solo nos dicen de dónde venimos; también nos recuerdan por qué seguimos adelante.”
+    </blockquote>
 
+  </section>
 
   <section id="capitulo2" class="bio-start">
 
@@ -352,61 +354,57 @@ En aquellos primeros años aprendí que el esfuerzo siempre da frutos. Vi trabaj
 
     <h2>Los primeros sueños</h2>
 
-    
     <p>
-Uno de los primeros sueños que marcó mi vida no fue la música, sino emigrar a Estados Unidos. Fue un cambio enorme, lleno de incertidumbre, sacrificios y esperanza. Aquella experiencia me enseñó que los sueños más grandes casi siempre exigen recorrer los caminos más difíciles.
-</p>
+      Uno de los primeros sueños que marcó mi vida no fue la música, sino emigrar a Estados Unidos. Fue un cambio enorme, lleno de incertidumbre, sacrificios y esperanza. Aquella experiencia me enseñó que los sueños más grandes casi siempre exigen recorrer los caminos más difíciles.
+    </p>
 
-<p>
-Aunque la música siempre estuvo presente, al principio era una pasión que nacía de manera natural. En cada reunión donde había un karaoke o un grupo musical, encontraba una oportunidad para cantar. Fue así como descubrí que cada canción me permitía expresar algo que las palabras por sí solas no podían decir.
-</p>
+    <p>
+      Aunque la música siempre estuvo presente, al principio era una pasión que nacía de manera natural. En cada reunión donde había un karaoke o un grupo musical, encontraba una oportunidad para cantar. Fue así como descubrí que cada canción me permitía expresar algo que las palabras por sí solas no podían decir.
+    </p>
 
-<p>
-Tiempo después, un cuñado tenía en su garaje todos los instrumentos para formar un grupo, pero faltaban los músicos. le dije con entusiasmo:yo puedo cantar,tocar la guitarra y también la batería". Conseguimos un baterista y, casi sin darnos cuenta, nació nuestro primer grupo. Aquella experiencia fue el inicio de un camino que más tarde cambiaría mi vida.
-</p>
+    <p>
+      Tiempo después, un cuñado tenía en su garaje todos los instrumentos para formar un grupo, pero faltaban los músicos. Le dije con entusiasmo: “Yo puedo cantar, tocar la guitarra y también la batería”. Conseguimos un baterista y, casi sin darnos cuenta, nació nuestro primer grupo. Aquella experiencia fue el inicio de un camino que más tarde cambiaría mi vida.
+    </p>
 
-<p>
-Durante esos años interpretaba con especial admiración las canciones de José José, especialmente <em>El triste</em> y <em>La nave del olvido</em>. Eran canciones de enorme dificultad vocal, y cada vez que las cantaba en un karaoke o frente al público, las personas me animaban diciéndome que debía seguir cantando. Sin saberlo, esas palabras iban sembrando una idea que crecería con el tiempo.
-</p>
+    <p>
+      Durante esos años interpretaba con especial admiración las canciones de José José, especialmente <em>El triste</em> y <em>La nave del olvido</em>. Eran canciones de enorme dificultad vocal, y cada vez que las cantaba en un karaoke o frente al público, las personas me animaban diciéndome que debía seguir cantando. Sin saberlo, esas palabras iban sembrando una idea que crecería con el tiempo.
+    </p>
 
-<blockquote class="bio-chapter-quote">
-"Los sueños comienzan como una ilusión; el trabajo es lo que termina convirtiéndolos en realidad."
-</blockquote>
+    <blockquote class="bio-chapter-quote">
+      “Los sueños comienzan como una ilusión; el trabajo es lo que termina convirtiéndolos en realidad.”
+    </blockquote>
+
   </section>
 
-<section id="capitulo3" class="bio-start">
+  <section id="capitulo3" class="bio-start">
 
-<span class="bio-label">Capítulo 3</span>
+    <span class="bio-label">Capítulo 3</span>
 
-<h2>Cuando las palabras encontraron su voz</h2>
+    <h2>Cuando las palabras encontraron su voz</h2>
 
     <p>
-    Con el paso del tiempo...
+      Las canciones llegaron a mi vida mucho después de descubrir que las palabras tenían un poder especial. Desde muy joven me gustaba escribir. En la escuela, cuando algún compañero tenía dificultades para expresar lo que sentía, me pedía ayuda para escribir una carta. Muchas veces eran cartas de amor. Yo escuchaba su historia, trataba de entender sus emociones y luego las convertía en palabras. Para mi sorpresa, aquellas cartas lograban tocar el corazón de quien las recibía.
     </p>
-<p>
-Las canciones llegaron a mi vida mucho después de descubrir que las palabras tenían un poder especial. Desde muy joven me gustaba escribir. En la escuela, cuando algún compañero tenía dificultades para expresar lo que sentía, me pedía ayuda para escribir una carta. Muchas veces eran cartas de amor. Yo escuchaba su historia, trataba de entender sus emociones y luego las convertía en palabras. Para mi sorpresa, aquellas cartas lograban tocar el corazón de quien las recibía.
-</p>
 
-<p>
-Con el tiempo comprendí que no solo escribía cartas; también escuchaba a las personas. Me gustaba aconsejarlas, ayudarles a encontrar esperanza y mostrarles otra manera de enfrentar los problemas. Sin saberlo, esas conversaciones fueron despertando en mí la sensibilidad que años después daría vida a mis canciones.
-</p>
+    <p>
+      Con el tiempo comprendí que no solo escribía cartas; también escuchaba a las personas. Me gustaba aconsejarlas, ayudarles a encontrar esperanza y mostrarles otra manera de enfrentar los problemas. Sin saberlo, esas conversaciones fueron despertando en mí la sensibilidad que años después daría vida a mis canciones.
+    </p>
 
-<p>
-La primera canción que realmente marcó mi camino nació del dolor más profundo que había experimentado hasta ese momento: la pérdida de mi madre. La extrañaba tanto que muchas veces levantaba la mirada al cielo y pronunciaba su nombre con la esperanza de escuchar una respuesta. El silencio fue la única respuesta, pero también fue el origen de una canción que transformó ese dolor en palabras. Aquella experiencia me hizo descubrir que escribir también podía sanar.
-</p>
+    <p>
+      La primera canción que realmente marcó mi camino nació del dolor más profundo que había experimentado hasta ese momento: la pérdida de mi madre. La extrañaba tanto que muchas veces levantaba la mirada al cielo y pronunciaba su nombre con la esperanza de escuchar una respuesta. El silencio fue la única respuesta, pero también fue el origen de una canción que transformó ese dolor en palabras. Aquella experiencia me hizo descubrir que escribir también podía sanar.
+    </p>
 
-<p>
-Al principio escribía en cualquier lugar: servilletas, hojas sueltas o cualquier papel que tuviera a la mano. Más adelante empecé a organizar mis ideas en libretas y, después de hacer los primeros borradores, las pasaba a máquina para conservarlas. Poco a poco comprendí que ya no estaba escribiendo por casualidad; estaba construyendo una colección de historias que algún día encontrarían su propia voz.
-</p>
+    <p>
+      Al principio escribía en cualquier lugar: servilletas, hojas sueltas o cualquier papel que tuviera a la mano. Más adelante empecé a organizar mis ideas en libretas y, después de hacer los primeros borradores, las pasaba a máquina para conservarlas. Poco a poco comprendí que ya no estaba escribiendo por casualidad; estaba construyendo una colección de historias que algún día encontrarían su propia voz.
+    </p>
 
-<p>
-Cuando terminé mis primeras diez canciones sentí algo diferente. Ya no era solamente una afición. Había descubierto una parte de mí que necesitaba seguir creando. Cada canción terminada me llenaba de orgullo, pero, sobre todo, me despertaba el deseo de escribir la siguiente. Fue entonces cuando entendí que la composición dejaría de ser un pasatiempo para convertirse en una parte esencial de mi vida.
-</p>
+    <p>
+      Cuando terminé mis primeras diez canciones sentí algo diferente. Ya no era solamente una afición. Había descubierto una parte de mí que necesitaba seguir creando. Cada canción terminada me llenaba de orgullo, pero, sobre todo, me despertaba el deseo de escribir la siguiente. Fue entonces cuando entendí que la composición dejaría de ser un pasatiempo para convertirse en una parte esencial de mi vida.
+    </p>
 
-<blockquote class="bio-chapter-quote">
-"Descubrí que las palabras pueden aliviar el dolor, pero cuando esas palabras se convierten en música, también pueden darle esperanza a quien las escucha."
-</blockquote>
-
+    <blockquote class="bio-chapter-quote">
+      “Descubrí que las palabras pueden aliviar el dolor, pero cuando esas palabras se convierten en música, también pueden darle esperanza a quien las escucha.”
+    </blockquote>
 
   </section>
 

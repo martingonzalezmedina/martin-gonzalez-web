@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Biografía | Martín González | Maravillas</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050505;
+      color: white;
+    }
+
+    .bio-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 55px;
+      box-sizing: border-box;
+      background: rgba(5, 5, 5, .92);
+      border-bottom: 1px solid rgba(212, 175, 55, .35);
+      backdrop-filter: blur(14px);
+    }
+
+    .bio-logo {
+      color: #d4af37;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .bio-navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border: 1px solid rgba(212, 175, 55, .55);
+      border-radius: 8px;
+      transition: .3s;
+    }
+
+    .bio-navbar a:hover {
+      color: #d4af37;
+      background: rgba(212, 175, 55, .08);
+      box-shadow: 0 0 18px rgba(212, 175, 55, .18);
+    }
+
+    .bio-hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 140px 30px 80px;
+      box-sizing: border-box;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 50% 30%,
+          rgba(212, 175, 55, .22),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 15% 80%,
+          rgba(100, 45, 150, .20),
+          transparent 28%
+        ),
+        linear-gradient(
+          145deg,
+          #050505,
+          #141414 55%,
+          #000000
+        );
+    }
+
+    .bio-hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, .09);
+      filter: blur(90px);
+      top: 150px;
+      right: 12%;
+    }
+
+    .bio-hero-content {
+      max-width: 950px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .bio-label {
+      display: inline-block;
+      margin-bottom: 22px;
+      color: #d4af37;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .bio-hero h1 {
+      margin: 0;
+      font-size: 72px;
+      line-height: 1.05;
+      text-shadow: 0 0 28px rgba(255, 255, 255, .16);
+    }
+
+    .bio-hero h1 span {
+      color: #d4af37;
+    }
+
+    .bio-hero h2 {
+      margin: 24px 0 0;
+      color: #d4af37;
+      font-size: 31px;
+      font-weight: normal;
+    }
+
+    .bio-quote {
+      max-width: 820px;
+      margin: 34px auto 0;
+      color: #eeeeee;
+      font-size: 23px;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .bio-line {
+      display: block;
+      width: 90px;
+      height: 2px;
+      margin: 32px auto;
+      background: #d4af37;
+      box-shadow: 0 0 16px rgba(212, 175, 55, .75);
+    }
+
+    .bio-intro {
+      max-width: 820px;
+      margin: 0 auto;
+      color: #cccccc;
+      font-size: 19px;
+      line-height: 1.9;
+    }
+
+    .bio-button {
+      display: inline-block;
+      margin-top: 38px;
+      padding: 16px 28px;
+      border-radius: 9px;
+      background: #d4af37;
+      color: #111111;
+      text-decoration: none;
+      font-weight: 700;
+      transition: .35s;
+      box-shadow: 0 0 25px rgba(212, 175, 55, .28);
+    }
+
+    .bio-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 38px rgba(212, 175, 55, .45);
+    }
+
+    .bio-start {
+      min-height: 350px;
+      padding: 100px 30px;
+      box-sizing: border-box;
+      text-align: center;
+      background: #080808;
+      .bio-chapter-quote {
+    max-width: 760px;
+    margin: 40px auto 0;
+    padding: 25px 30px;
+    color: #d4af37;
+    font-size: 23px;
+    line-height: 1.7;
+    font-style: italic;
+    border-left: 3px solid #d4af37;
+    background: rgba(212,175,55,.06);
+}.bio-photo{
+    text-align:center;
+    margin:30px 0;
+}
+
+.bio-photo img{
+  background:#111;
+padding:8px;
+    width:240px;
+    max-width:100%;
+    height:auto;
+    border-radius:14px;
+    border:4px solid #d4af37;
+    box-shadow:0 12px 30px rgba(0,0,0,.45);
+}
+
+.bio-caption{
+    margin-top:15px;
+    color:#cccccc;
+    font-size:16px;
+    font-style:italic;
+}
+    }
+
+    .bio-start h2 {
+      margin: 0 0 22px;
+      color: #d4af37;
+      font-size: 42px;
+    }
+
+    .bio-start p {
+      max-width: 850px;
+      margin: 0 auto;
+      color: #dddddd;
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 800px) {
+      .bio-navbar {
+        padding: 14px 20px;
+      }
+
+      .bio-logo {
+        font-size: 18px;
+      }
+
+      .bio-navbar a {
+        padding: 8px 11px;
+        font-size: 13px;
+      }
+
+      .bio-hero h1 {
+        font-size: 45px;
+      }
+
+      .bio-hero h2 {
+        font-size: 24px;
+      }
+
+      .bio-quote {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="bio-navbar">
+    <div class="bio-logo">
+      MARTÍN GONZÁLEZ
+    </div>
+
+  <a href="index%20copy%2010.8.html">
+  </a>
+  ← Volver al sitio
+</a>
+  </nav>
+
+  <header class="bio-hero">
+
+    <div class="bio-hero-content">
+
+      <span class="bio-label">
+        Biografía Oficial
+      </span>
+
+      <h1>
+        Martín González
+        <span>| Maravillas</span>
+      </h1>
+
+      <h2>
+        Cada canción tiene una historia. Esta es la mía.
+      </h2>
+
+      <p class="bio-quote">
+        “Algunas personas escriben canciones.
+        Yo primero viví las historias que después
+        se convirtieron en ellas.”
+      </p>
+
+      <span class="bio-line"></span>
+
+      <p class="bio-intro">
+        Antes de convertirme en compositor y artista independiente,
+        fui un niño que aprendió que incluso las experiencias más
+        difíciles pueden transformarse en esperanza, propósito y música.
+        Cada canción guarda un fragmento de ese camino.
+      </p>
+
+      <a href="#comenzar" class="bio-button">
+        Comenzar mi historia
+      </a>
+
+    </div>
+
+  </header>
+
+ <section id="comenzar" class="bio-start">
+
+  <span class="bio-label">Capítulo 1</span>
+
+  <h2>Mis raíces</h2>
+<div class="bio-photo">
+    <img src="fotos/martin-13.jpeg" alt="Martín González a los 13 años">
+    <p class="bio-caption">
+        Martín González, a los 13 años. Aún no sabía que las experiencias que estaba viviendo algún día se convertirían en canciones.
+    </p>
+</div>
+  <span class="bio-line"></span>
+
+<p>
+Nací en Tala, Jalisco, un pueblo de gente trabajadora donde aprendí que los sueños no se heredan: se construyen. Crecí rodeado de valores, sacrificios y esperanza. 
+Desde muy pequeño entendí que cada experiencia, buena o difícil, iba dejando una enseñanza que algún día se convertiría en parte de mi historia.
+</<p>
+En aquellos primeros años aprendí que el esfuerzo siempre da frutos. Vi trabajar a mi familia con dedicación y entendí que los grandes sueños comienzan con pequeños pasos. Sin saberlo, cada una de esas experiencias estaba formando la persona y el compositor que llegaría a ser años después.
+</p>
+  <p>
+    Antes de conocer los estudios de grabación, los escenarios o la vida
+    artística, conocí el trabajo, las pérdidas y los sueños. Cada una de esas
+    vivencias fue formando mi sensibilidad y, con el paso del tiempo, se
+    convirtió en la materia prima de mis canciones.
+  </p>
+
+  <blockquote class="bio-chapter-quote">
+    “Las raíces no solo nos dicen de dónde venimos; también nos recuerdan
+    por qué seguimos adelante.”
+  </blockquote>
+
+</section>
+
+
+  <section id="capitulo2" class="bio-start">
+
+    <span class="bio-label">Capítulo 2</span>
+
+    <h2>Los primeros sueños</h2>
+
+    
+    <p>
+Uno de los primeros sueños que marcó mi vida no fue la música, sino emigrar a Estados Unidos. Fue un cambio enorme, lleno de incertidumbre, sacrificios y esperanza. Aquella experiencia me enseñó que los sueños más grandes casi siempre exigen recorrer los caminos más difíciles.
+</p>
+
+<p>
+Aunque la música siempre estuvo presente, al principio era una pasión que nacía de manera natural. En cada reunión donde había un karaoke o un grupo musical, encontraba una oportunidad para cantar. Fue así como descubrí que cada canción me permitía expresar algo que las palabras por sí solas no podían decir.
+</p>
+
+<p>
+Tiempo después, un cuñado tenía en su garaje todos los instrumentos para formar un grupo, pero faltaban los músicos. le dije con entusiasmo:yo puedo cantar,tocar la guitarra y también la batería". Conseguimos un baterista y, casi sin darnos cuenta, nació nuestro primer grupo. Aquella experiencia fue el inicio de un camino que más tarde cambiaría mi vida.
+</p>
+
+<p>
+Durante esos años interpretaba con especial admiración las canciones de José José, especialmente <em>El triste</em> y <em>La nave del olvido</em>. Eran canciones de enorme dificultad vocal, y cada vez que las cantaba en un karaoke o frente al público, las personas me animaban diciéndome que debía seguir cantando. Sin saberlo, esas palabras iban sembrando una idea que crecería con el tiempo.
+</p>
+
+<blockquote class="bio-chapter-quote">
+"Los sueños comienzan como una ilusión; el trabajo es lo que termina convirtiéndolos en realidad."
+</blockquote>
+  </section>
+
+<section id="capitulo3" class="bio-start">
+
+<span class="bio-label">Capítulo 3</span>
+
+<h2>Cuando las palabras encontraron su voz</h2>
+
+    <p>
+    Con el paso del tiempo...
+    </p>
+<p>
+Las canciones llegaron a mi vida mucho después de descubrir que las palabras tenían un poder especial. Desde muy joven me gustaba escribir. En la escuela, cuando algún compañero tenía dificultades para expresar lo que sentía, me pedía ayuda para escribir una carta. Muchas veces eran cartas de amor. Yo escuchaba su historia, trataba de entender sus emociones y luego las convertía en palabras. Para mi sorpresa, aquellas cartas lograban tocar el corazón de quien las recibía.
+</p>
+
+<p>
+Con el tiempo comprendí que no solo escribía cartas; también escuchaba a las personas. Me gustaba aconsejarlas, ayudarles a encontrar esperanza y mostrarles otra manera de enfrentar los problemas. Sin saberlo, esas conversaciones fueron despertando en mí la sensibilidad que años después daría vida a mis canciones.
+</p>
+
+<p>
+La primera canción que realmente marcó mi camino nació del dolor más profundo que había experimentado hasta ese momento: la pérdida de mi madre. La extrañaba tanto que muchas veces levantaba la mirada al cielo y pronunciaba su nombre con la esperanza de escuchar una respuesta. El silencio fue la única respuesta, pero también fue el origen de una canción que transformó ese dolor en palabras. Aquella experiencia me hizo descubrir que escribir también podía sanar.
+</p>
+
+<p>
+Al principio escribía en cualquier lugar: servilletas, hojas sueltas o cualquier papel que tuviera a la mano. Más adelante empecé a organizar mis ideas en libretas y, después de hacer los primeros borradores, las pasaba a máquina para conservarlas. Poco a poco comprendí que ya no estaba escribiendo por casualidad; estaba construyendo una colección de historias que algún día encontrarían su propia voz.
+</p>
+
+<p>
+Cuando terminé mis primeras diez canciones sentí algo diferente. Ya no era solamente una afición. Había descubierto una parte de mí que necesitaba seguir creando. Cada canción terminada me llenaba de orgullo, pero, sobre todo, me despertaba el deseo de escribir la siguiente. Fue entonces cuando entendí que la composición dejaría de ser un pasatiempo para convertirse en una parte esencial de mi vida.
+</p>
+
+<blockquote class="bio-chapter-quote">
+"Descubrí que las palabras pueden aliviar el dolor, pero cuando esas palabras se convierten en música, también pueden darle esperanza a quien las escucha."
+</blockquote>
+
+
+  </section>
+
+</body>
+
+</html>
