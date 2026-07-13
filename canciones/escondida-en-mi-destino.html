@@ -32,6 +32,7 @@
       box-sizing: border-box;
       background: rgba(5, 5, 5, 0.92);
       border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+      backdrop-filter: blur(12px);
     }
 
     .song-logo {
@@ -98,16 +99,16 @@
 
     .song-hero h1 {
       margin: 0;
+      color: #d4af37;
       font-size: 72px;
       line-height: 1.05;
-      color: #d4af37;
     }
 
     .song-subtitle {
       margin-top: 24px;
+      color: #eeeeee;
       font-size: 24px;
       line-height: 1.6;
-      color: #eeeeee;
     }
 
     .song-meta {
@@ -122,6 +123,20 @@
       background: #080808;
     }
 
+    .song-cover {
+      margin-bottom: 35px;
+      text-align: center;
+    }
+
+    .song-cover img {
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+      border: 2px solid rgba(212, 175, 55, 0.35);
+      border-radius: 18px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+    }
+
     .song-player h2 {
       margin: 0 0 30px;
       color: #d4af37;
@@ -133,52 +148,34 @@
       max-width: 620px;
     }
 
-    .song-cover {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .song-cover img {
-      width: 100%;
-      max-width: 560px;
-      border-radius: 18px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-      border: 2px solid rgba(212, 175, 55, 0.35);
-    }
-
     .song-story {
       max-width: 900px;
       margin: 70px auto;
       padding: 50px;
+      box-sizing: border-box;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(212, 175, 55, 0.25);
       border-radius: 18px;
-      box-sizing: border-box;
-    }
-
-    .song-story h2 {
-      color: #d4af37;
-      font-size: 36px;
-      margin-bottom: 25px;
-      text-align: center;
-    }
-
-    .song-story p {
-      color: #eeeeee;
-      font-size: 20px;
-      line-height: 1.9;
-      margin-bottom: 22px;
     }
 
     .song-story .song-label {
       display: block;
-      text-align: center;
       margin-bottom: 18px;
+      text-align: center;
+    }
+
+    .song-story h2 {
+      margin-bottom: 25px;
       color: #d4af37;
-      font-size: 14px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      font-weight: bold;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    .song-story p {
+      margin-bottom: 22px;
+      color: #eeeeee;
+      font-size: 20px;
+      line-height: 1.9;
     }
 
     .song-quote {
@@ -187,9 +184,9 @@
     }
 
     .song-quote h2 {
+      margin-bottom: 20px;
       color: #d4af37;
       font-size: 30px;
-      margin-bottom: 20px;
     }
 
     .song-quote blockquote {
