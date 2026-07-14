@@ -3,145 +3,454 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regresar Jamás | Martín González Maravillas</title>
+
+  <title>Biografía | Martín González Maravillas</title>
+
   <style>
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #050505;
-    color: white;
-  }
-
-  .song-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 55px;
-    box-sizing: border-box;
-    background: rgba(5, 5, 5, 0.92);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-  }
-
-  .song-logo {
-    color: #d4af37;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-
-  .song-navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 16px;
-    border: 1px solid rgba(212, 175, 55, 0.55);
-    border-radius: 8px;
-  }
-
-  .song-hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 130px 30px 80px;
-    box-sizing: border-box;
-    text-align: center;
-    background:
-      radial-gradient(circle at 50% 30%, rgba(212, 175, 55, 0.20), transparent 32%),
-      radial-gradient(circle at 20% 80%, rgba(95, 35, 130, 0.22), transparent 28%),
-      linear-gradient(145deg, #050505, #151515 55%, #000000);
-  }
-
-  .song-hero-content {
-    max-width: 900px;
-  }
-
-  .song-label {
-    display: inline-block;
-    margin-bottom: 22px;
-    color: #d4af37;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-  }
-
-  .song-hero h1 {
-    margin: 0;
-    font-size: 72px;
-    line-height: 1.05;
-    color: #d4af37;
-  }
-
-  .song-subtitle {
-    margin-top: 24px;
-    font-size: 24px;
-    line-height: 1.6;
-    color: #eeeeee;
-  }
-
-  .song-meta {
-    margin-top: 28px;
-    color: #cccccc;
-    font-size: 18px;
-  }
-
-  @media (max-width: 800px) {
-    .song-navbar {
-      padding: 14px 20px;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .song-logo {
-      font-size: 17px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #050505;
+      color: white;
     }
 
-    .song-hero h1 {
-      font-size: 44px;
+    .bio-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 55px;
+      box-sizing: border-box;
+      background: rgba(5, 5, 5, 0.94);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+      backdrop-filter: blur(12px);
     }
 
-    .song-subtitle {
-      font-size: 19px;
+    .bio-logo {
+      color: #d4af37;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
-  }
-</style>
+
+    .bio-navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border: 1px solid rgba(212, 175, 55, 0.55);
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .bio-navbar a:hover {
+      color: #d4af37;
+      background: rgba(212, 175, 55, 0.08);
+    }
+
+    .bio-hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 135px 30px 80px;
+      box-sizing: border-box;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 24%, rgba(212, 175, 55, 0.22), transparent 30%),
+        radial-gradient(circle at 18% 82%, rgba(95, 35, 130, 0.22), transparent 28%),
+        linear-gradient(145deg, #050505, #151515 55%, #000000);
+    }
+
+    .bio-hero-content {
+      max-width: 980px;
+    }
+
+    .bio-label {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #d4af37;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    .bio-hero h1 {
+      margin: 0;
+      color: #d4af37;
+      font-size: 68px;
+      line-height: 1.08;
+    }
+
+    .bio-hero p {
+      max-width: 820px;
+      margin: 28px auto 0;
+      color: #eeeeee;
+      font-size: 23px;
+      line-height: 1.7;
+    }
+
+    .bio-main {
+      padding: 75px 24px 110px;
+      background: #080808;
+    }
+
+    .bio-intro {
+      max-width: 920px;
+      margin: 0 auto 55px;
+      padding: 42px;
+      box-sizing: border-box;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(212, 175, 55, 0.28);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.38);
+    }
+
+    .bio-intro h2,
+    .bio-chapter h2,
+    .bio-closing h2 {
+      margin-top: 0;
+      color: #d4af37;
+    }
+
+    .bio-intro h2 {
+      font-size: 38px;
+      margin-bottom: 22px;
+    }
+
+    .bio-intro p,
+    .bio-chapter p,
+    .bio-closing p {
+      color: #eeeeee;
+      font-size: 20px;
+      line-height: 1.9;
+    }
+
+    .bio-chapters {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      gap: 30px;
+    }
+
+    .bio-chapter {
+      padding: 42px;
+      border-radius: 20px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.045),
+          rgba(255, 255, 255, 0.018)
+        );
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+    }
+
+    .chapter-number {
+      display: block;
+      margin-bottom: 12px;
+      color: #d4af37;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .bio-chapter h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .bio-chapter p {
+      margin: 0 0 20px;
+    }
+
+    .bio-chapter p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio-quote {
+      max-width: 820px;
+      margin: 55px auto;
+      padding: 38px 42px;
+      box-sizing: border-box;
+      color: white;
+      font-size: 28px;
+      font-style: italic;
+      line-height: 1.6;
+      text-align: center;
+      border-left: 4px solid #d4af37;
+      background: rgba(212, 175, 55, 0.055);
+      border-radius: 14px;
+    }
+
+    .bio-closing {
+      max-width: 920px;
+      margin: 55px auto 0;
+      padding: 44px;
+      box-sizing: border-box;
+      text-align: center;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 20px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.13), transparent 45%),
+        #101010;
+    }
+
+    .bio-closing h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      padding: 28px;
+      text-align: center;
+      color: #aaaaaa;
+      background: #050505;
+      border-top: 1px solid #252525;
+    }
+
+    @media (max-width: 800px) {
+      .bio-navbar {
+        padding: 14px 18px;
+      }
+
+      .bio-logo {
+        font-size: 16px;
+      }
+
+      .bio-navbar a {
+        padding: 8px 10px;
+        font-size: 13px;
+      }
+
+      .bio-hero {
+        min-height: auto;
+        padding: 125px 22px 70px;
+      }
+
+      .bio-hero h1 {
+        font-size: 43px;
+      }
+
+      .bio-hero p {
+        font-size: 19px;
+      }
+
+      .bio-main {
+        padding: 55px 18px 80px;
+      }
+
+      .bio-intro,
+      .bio-chapter,
+      .bio-closing {
+        padding: 28px 22px;
+      }
+
+      .bio-intro h2,
+      .bio-chapter h2,
+      .bio-closing h2 {
+        font-size: 29px;
+      }
+
+      .bio-intro p,
+      .bio-chapter p,
+      .bio-closing p {
+        font-size: 18px;
+      }
+
+      .bio-quote {
+        margin: 40px auto;
+        padding: 28px 24px;
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
 
-<body><nav class="song-navbar">
-  <div class="song-logo">MARTÍN GONZÁLEZ</div>
+<body>
 
-  <a href="../index.html#musica">
-    ← Volver a Música
-  </a>
-</nav>
+  <nav class="bio-navbar">
+    <div class="bio-logo">MARTÍN GONZÁLEZ</div>
 
-<header class="song-hero">
-  <div class="song-hero-content">
+    <a href="index.html">
+      ← Volver al sitio
+    </a>
+  </nav>
 
-    <span class="song-label">
-      Archivo Musical • Canción 001
-    </span>
+  <header class="bio-hero">
+    <div class="bio-hero-content">
+      <span class="bio-label">Biografía oficial</span>
 
-    <h1>Regresar Jamás</h1>
+      <h1>Martín González Maravillas</h1>
 
-    <p class="song-subtitle">
-      Una historia de dolor, dignidad y la fuerza necesaria para decir:
-      hasta aquí.
-    </p>
+      <p>
+        Compositor, artista independiente y creador de historias convertidas en canciones.
+        Una vida marcada por las experiencias, la sensibilidad y la convicción de que cada
+        persona guarda una historia que merece ser escuchada.
+      </p>
+    </div>
+  </header>
 
-    <p class="song-meta">
-      Pop · Martín González Maravillas
-    </p>
+  <main class="bio-main">
 
-  </div>
-</header>
+    <section class="bio-intro">
+      <h2>Una vida escrita en canciones</h2>
+
+      <p>
+        Soy Martín González, artista independiente, compositor y creador de más de quinientas
+        canciones originales. Mi música nace de las vivencias: de aquello que amamos, perdemos,
+        recordamos, soñamos y aprendemos a superar.
+      </p>
+
+      <p>
+        No escribo solamente para contar mi historia. Escribo para que otras personas puedan
+        reconocerse en una letra, encontrar consuelo en una melodía y descubrir que no están
+        solas en lo que sienten.
+      </p>
+    </section>
+
+    <section class="bio-chapters">
+
+      <article class="bio-chapter">
+        <span class="chapter-number">Capítulo 01</span>
+        <h2>Mis raíces</h2>
+
+        <p>
+          El nombre Maravillas tiene un significado profundamente familiar. Cuando yo era niño,
+          a mi padre le llamaban Maravillas porque, para él, no existían los imposibles. Siempre
+          encontraba una solución, aun en los momentos más complicados. Literalmente, hacía
+          maravillas.
+        </p>
+
+        <p>
+          Con el tiempo decidí llevar ese apodo con orgullo. No solamente como un nombre artístico,
+          sino como una forma de honrar su memoria, su carácter y esa manera de enfrentar la vida
+          sin rendirse.
+        </p>
+      </article>
+
+      <article class="bio-chapter">
+        <span class="chapter-number">Capítulo 02</span>
+        <h2>Las experiencias que formaron mi voz</h2>
+
+        <p>
+          Las experiencias buenas y difíciles de mi vida fueron moldeando mi sensibilidad. Cada
+          alegría, decepción, pérdida, encuentro y aprendizaje me ayudó a comprender mejor a las
+          personas y a escuchar lo que muchas veces no se dice con palabras.
+        </p>
+
+        <p>
+          Con el tiempo descubrí que podía tomar una emoción, una conversación o un recuerdo y
+          transformarlo en una historia musical. Esas vivencias no me detuvieron; me fortalecieron
+          y me ayudaron a convertirme en la persona y el compositor que soy hoy.
+        </p>
+      </article>
+
+      <article class="bio-chapter">
+        <span class="chapter-number">Capítulo 03</span>
+        <h2>Cuando las palabras encontraron su voz</h2>
+
+        <p>
+          Mi forma de componer parte de una idea sencilla: cada canción representa una vivencia.
+          Por eso mis letras pueden adaptarse a distintos géneros sin perder su esencia. He escrito
+          canciones de regional mexicano, mariachi, norteño, banda, balada, pop, bachata, salsa,
+          cumbia, reguetón, dembow, trap, rap mexicano y otros estilos.
+        </p>
+
+        <p>
+          Más allá del género, procuro conservar siempre el sentimiento, la claridad y la emoción.
+          Mis canciones hablan de amor, desamor, esperanza, recuerdos, dignidad y decisiones que
+          cambian una vida.
+        </p>
+      </article>
+
+      <article class="bio-chapter">
+        <span class="chapter-number">Capítulo 04</span>
+        <h2>Norma y Martín</h2>
+
+        <p>
+          Norma ocupa un lugar fundamental en mi vida y en este proyecto. Juntos hemos construido
+          una visión basada en el esfuerzo, la creatividad, el apoyo mutuo y la confianza en que los
+          sueños pueden convertirse en realidad cuando se trabajan con constancia.
+        </p>
+
+        <p>
+          De esa unión nació también GLE² Studio: la letra G representa el apellido González y el
+          número dos representa a Norma y Martín, dos González sumando talento, trabajo y sueños
+          para dar vida a nuevas canciones.
+        </p>
+      </article>
+
+      <article class="bio-chapter">
+        <span class="chapter-number">Capítulo 05</span>
+        <h2>GLE² Studio</h2>
+
+        <p>
+          GLE² Studio es el espacio donde una idea comienza a transformarse en obra. Ahí desarrollo
+          letras, melodías, demos y grabaciones, cuidando que cada canción conserve su identidad y
+          la emoción con la que fue creada.
+        </p>
+
+        <p>
+          El estudio representa independencia, disciplina y crecimiento. Es el lugar desde donde
+          continúo construyendo mi catálogo musical y preparando canciones para artistas, grupos,
+          productores y proyectos que conecten con estas historias.
+        </p>
+      </article>
+
+      <article class="bio-chapter">
+        <span class="chapter-number">Capítulo 06</span>
+        <h2>Mi propósito</h2>
+
+        <p>
+          Mi propósito es que las canciones permanezcan. Que dentro de veinte años alguien pueda
+          escucharlas y sentir que siguen vivas, sin importar el tiempo ni las circunstancias.
+        </p>
+
+        <p>
+          También quiero motivar a otros artistas independientes a soñar, planear y actuar. Los
+          sueños necesitan fe, pero también trabajo. Mi consejo siempre será no dejar de creer,
+          aun cuando el camino parezca largo.
+        </p>
+      </article>
+
+    </section>
+
+    <blockquote class="bio-quote">
+      “Cada vida merece una canción. Cada canción guarda una vida.”
+    </blockquote>
+
+    <section class="bio-closing">
+      <h2>La historia continúa</h2>
+
+      <p>
+        Hoy sigo escribiendo, grabando y construyendo un archivo musical que reúne cientos de
+        historias. Cada nueva canción es un capítulo más de este camino y una oportunidad para
+        conectar con alguien a través de la música.
+      </p>
+
+      <p>
+        Martín González Maravillas no es solamente un nombre artístico. Es la unión de mis raíces,
+        mis experiencias, mi familia, mis sueños y la decisión de convertir todo lo vivido en
+        canciones capaces de permanecer.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Martín González | Maravillas. Todos los derechos reservados.
+  </footer>
 
 </body>
 </html>
