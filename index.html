@@ -1241,372 +1241,47 @@ section[id] {
     </article>
 
 
-<!DOCTYPE html>
-<html lang="es">
+<article class="cancion-tarjeta">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <img
+    class="cancion-portada"
+    src="fotos/soledad-cover.jpg"
+    alt="Portada de Soledad"
+  >
 
-  <title>Escondida en mi destino | Martín González Maravillas</title>
+  <div class="cancion-contenido">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    <span class="cancion-numero">
+      Canción 004
+    </span>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #050505;
-      color: white;
-    }
+    <h3>Soledad</h3>
 
-    .song-navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 55px;
-      box-sizing: border-box;
-      background: rgba(5, 5, 5, 0.92);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.35);
-      backdrop-filter: blur(12px);
-    }
+    <p class="cancion-genero">
+      Regional Mexicano
+    </p>
 
-    .song-logo {
-      color: #d4af37;
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
+    <p class="cancion-descripcion">
+      Una historia donde la ausencia, el silencio y los recuerdos se convierten en la única compañía.
+    </p>
 
-    .song-navbar a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 16px;
-      border: 1px solid rgba(212, 175, 55, 0.55);
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-
-    .song-navbar a:hover {
-      color: #d4af37;
-      background: rgba(212, 175, 55, 0.08);
-    }
-
-    .song-hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 130px 30px 80px;
-      box-sizing: border-box;
-      text-align: center;
-      background:
-        radial-gradient(
-          circle at 50% 30%,
-          rgba(212, 175, 55, 0.20),
-          transparent 32%
-        ),
-        radial-gradient(
-          circle at 20% 80%,
-          rgba(95, 35, 130, 0.22),
-          transparent 28%
-        ),
-        linear-gradient(
-          145deg,
-          #050505,
-          #151515 55%,
-          #000000
-        );
-    }
-
-    .song-hero-content {
-      max-width: 900px;
-    }
-
-    .song-label {
-      display: inline-block;
-      margin-bottom: 22px;
-      color: #d4af37;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-    }
-
-    .song-hero h1 {
-      margin: 0;
-      color: #d4af37;
-      font-size: 72px;
-      line-height: 1.05;
-    }
-
-    .song-subtitle {
-      margin-top: 24px;
-      color: #eeeeee;
-      font-size: 24px;
-      line-height: 1.6;
-    }
-
-    .song-meta {
-      margin-top: 28px;
-      color: #cccccc;
-      font-size: 18px;
-    }
-
-    .song-player {
-      padding: 90px 30px;
-      text-align: center;
-      background: #080808;
-    }
-
-    .song-cover {
-      margin-bottom: 35px;
-      text-align: center;
-    }
-
-    .song-cover img {
-      width: 100%;
-      max-width: 560px;
-      height: auto;
-      border: 2px solid rgba(212, 175, 55, 0.35);
-      border-radius: 18px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-    }
-
-    .song-player h2 {
-      margin: 0 0 30px;
-      color: #d4af37;
-      font-size: 38px;
-    }
-
-    .song-player audio {
-      width: 100%;
-      max-width: 620px;
-    }
-
-    .song-story {
-      max-width: 900px;
-      margin: 70px auto;
-      padding: 50px;
-      box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      border-radius: 18px;
-    }
-
-    .song-story .song-label {
-      display: block;
-      margin-bottom: 18px;
-      text-align: center;
-    }
-
-    .song-story h2 {
-      margin-bottom: 25px;
-      color: #d4af37;
-      font-size: 36px;
-      text-align: center;
-    }
-
-    .song-story p {
-      margin-bottom: 22px;
-      color: #eeeeee;
-      font-size: 20px;
-      line-height: 1.9;
-    }
-
-    .song-quote {
-      margin-top: 50px;
-      text-align: center;
-    }
-
-    .song-quote h2 {
-      margin-bottom: 20px;
-      color: #d4af37;
-      font-size: 30px;
-    }
-
-    .song-quote blockquote {
-      max-width: 700px;
-      margin: auto;
-      padding-left: 25px;
-      color: white;
-      font-size: 28px;
-      font-style: italic;
-      line-height: 1.6;
-      border-left: 4px solid #d4af37;
-    }
-
-    @media (max-width: 800px) {
-      .song-navbar {
-        padding: 14px 20px;
-      }
-
-      .song-logo {
-        font-size: 17px;
-      }
-
-      .song-navbar a {
-        padding: 8px 11px;
-        font-size: 13px;
-      }
-
-      .song-hero h1 {
-        font-size: 44px;
-      }
-
-      .song-subtitle {
-        font-size: 19px;
-      }
-
-      .song-player h2 {
-        font-size: 32px;
-      }
-
-      .song-story {
-        margin: 45px 18px;
-        padding: 32px 22px;
-      }
-
-      .song-story h2 {
-        font-size: 30px;
-      }
-
-      .song-story p {
-        font-size: 18px;
-      }
-
-      .song-quote blockquote {
-        font-size: 22px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <nav class="song-navbar">
-    <div class="song-logo">
-      MARTÍN GONZÁLEZ
-    </div>
-
-    <a href="../index.html#musica">
-      ← Volver a Música
+    <a
+      class="cancion-boton"
+      href="canciones/soledad.html"
+    >
+      Escuchar y conocer la historia
     </a>
-  </nav>
 
-  <header class="song-hero">
-    <div class="song-hero-content">
+  </div>
 
-      <span class="song-label">
-        Archivo Musical • Canción 003
-      </span>
-
-      <h1>Escondida en mi destino</h1>
-
-      <p class="song-subtitle">
-        Una historia sobre el amor que el destino tenía reservado.
-      </p>
-
-      <p class="song-meta">
-        Regional Mexicano · Mariachi Ranchero · Martín González Maravillas
-      </p>
-
-    </div>
-  </header>
-
-  <section class="song-player">
-
-    <div class="song-cover">
-      <img
-        src="../fotos/escondida-en-mi-destino-cover.jpg"
-        alt="Portada de Escondida en mi destino"
-      >
-    </div>
-
-    <span class="song-label">
-      Escuchar canción
-    </span>
-
-    <h2>Escondida en mi destino</h2>
-
-    <audio controls preload="metadata">
-      <source
-        src="../audio/escondida-en-mi-destino.mp3"
-        type="audio/mpeg"
-      >
-      Tu navegador no puede reproducir este archivo de audio.
-    </audio>
-
-  </section>
-
-  <section class="song-story">
-
-    <span class="song-label">
-      ¿Qué hay detrás de esta canción?
-    </span>
-
-    <h2>La historia de “Escondida en mi destino”</h2>
-
-    <p>
-      A veces creemos que conocemos el rumbo de nuestra vida. Planeamos,
-      soñamos y tomamos decisiones pensando que nosotros escribimos toda
-      nuestra historia. Sin embargo, con el paso del tiempo comprendemos
-      que el destino también guarda capítulos que todavía no estamos
-      preparados para conocer.
-    </p>
-
-    <p>
-      “Escondida en mi destino” nació de esa reflexión. Después de vivir
-      distintas etapas, conocer personas y atravesar experiencias que en
-      su momento parecían no tener una explicación, comprendí que cada una
-      de ellas me estaba preparando para encontrar a la mujer que el
-      destino tenía reservada para mí.
-    </p>
-
-    <p>
-      Esa mujer es mi esposa, Norma. Al conocerla descubrí que, después de
-      todo lo que ella había vivido y de todo lo que yo había recorrido,
-      nuestros caminos parecían haber sido preparados para encontrarse.
-      Éramos dos personas con historias diferentes, pero con una manera
-      muy parecida de comprender la vida, el amor y la esperanza.
-    </p>
-
-    <p>
-      Hoy entiendo que nada de lo vivido fue inútil. Cada alegría, cada
-      decepción y cada aprendizaje fueron piezas necesarias para llegar
-      hasta ella. Esta canción es una forma de agradecerle a la vida por
-      haber escondido el amor más importante exactamente donde debía
-      estar: en mi destino.
-    </p>
-
-    <div class="song-quote">
-
-      <h2>Frase de la canción</h2>
-
-      <blockquote>
-        “Hay personas que estaban destinadas a llegar a nuestra vida,
-        aunque el camino haya sido largo.”
-      </blockquote>
-
-    </div>
-
-  </section>
-
-</body>
-
-</html>
+</article>
   </div>
 
 </div>
 
 </section>
+
+
 
   <section id="compositor" class="section">
     <h2>Compositor</h2>
@@ -1619,7 +1294,7 @@ section[id] {
     </p>
   </section>
 
-  <section id="trayectoria" class="section section-dark"><
+  <section id="trayectoria" class="section section-dark">
     <h2>Camino artístico</h2>
 
     <div class="timeline">
