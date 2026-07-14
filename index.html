@@ -1040,12 +1040,14 @@ section[id] {
     border-color: rgba(212, 175, 55, 0.8);
   }
 
-  .cancion-portada {
+ .cancion-portada {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    max-width: 260px;
+    height: auto;
     display: block;
-    object-fit: cover;
-  }
+    margin: 0 auto 18px;
+    border-radius: 14px;
+}
 
   .cancion-contenido {
     flex: 1;
