@@ -783,7 +783,6 @@ section[id] {
   <a href="#estudio">GLE² STUDIO</a>
   <a href="#musica">MÚSICA</a>
   <a href="#trayectoria">TRAYECTORIA</a>
-  <a href="biografia.html">BIOGRAFÍA</a>
   <a href="#galeria">GALERÍA</a>
   <a href="#contacto">CONTACTO</a>
 </div>
@@ -954,21 +953,7 @@ section[id] {
 
 </section>
 
-  
-<section class="section section-dark">
-<div class="music-feature">
-<h2 style="color:#d4af37;">🎬 Mi Tala</h2>
-<p style="max-width:760px;margin:auto;">Video y reproductor destacados de la canción principal del sitio.</p>
-<video controls style="width:100%;margin-top:25px;border-radius:16px;">
-<source src="videos/mi-tala.mp4" type="video/mp4">
-</video>
-<audio controls style="margin-top:20px;">
-<source src="audio/Tapita.mp3" type="audio/mpeg">
-</audio>
-</div>
-</section>
-
-<section id="musica" class="section section-dark">
+  <section id="musica" class="section section-dark">
     <h2>Canciones que nacieron de una historia</h2>
     <p>
       Canciones creadas desde vivencias reales, con letras que hablan de amor, desamor,
@@ -997,308 +982,173 @@ section[id] {
       </div>
     </div>
 
+<div class="music-feature">
 
-
-    
-<style>
-  .catalogo-musical {
-    max-width: 1200px;
-    margin: 70px auto 0;
-  }
-
-  .catalogo-encabezado {
-    margin-bottom: 38px;
-    text-align: center;
-  }
-
-  .catalogo-etiqueta {
-    display: block;
-    margin-bottom: 12px;
-    color: #d4af37;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-  }
-
-  .catalogo-encabezado h2 {
-    margin: 0 0 15px;
-    color: #d4af37;
-    font-size: 42px;
-  }
-
-  .catalogo-encabezado p {
-    max-width: 760px;
-    margin: auto;
-    color: #dddddd;
-    font-size: 19px;
-    line-height: 1.7;
-  }
-
-  .catalogo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px;
-  }
-
-  .cancion-tarjeta {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(145deg, #151515, #080808);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    border-radius: 18px;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.38);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-  }
-
-  .cancion-tarjeta:hover {
-    transform: translateY(-7px);
-    border-color: rgba(212, 175, 55, 0.8);
-  }
-
- .cancion-portada {
-    width: 100%;
-    max-width: 180px;
-    height: auto;
-    display: block;
-    margin: 25px auto 18px;
-    border-radius: 14px;
-    box-shadow: 0 15px 35px rgba(0,0,0,.35);
-}
-
-  .cancion-contenido {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-  }
-
-  .cancion-numero {
-    margin-bottom: 10px;
-    color: #d4af37;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
-
-  .cancion-contenido h3 {
-    margin: 0 0 10px;
-    color: white;
-    font-size: 27px;
-  }
-
-  .cancion-genero {
-    margin: 0 0 16px;
-    color: #d4af37;
-    font-size: 15px;
-    font-weight: bold;
-  }
-
-  .cancion-descripcion {
-    flex: 1;
-    margin: 0 0 24px;
-    color: #dddddd;
-    font-size: 17px;
-    line-height: 1.65;
-  }
-
-  .cancion-boton {
-    display: inline-block;
-    align-self: flex-start;
-    padding: 12px 20px;
-    color: #050505;
-    font-weight: bold;
-    text-decoration: none;
-    background: #d4af37;
-    border-radius: 8px;
-    transition: 0.3s ease;
-  }
-
-  .cancion-boton:hover {
-    background: #f1cd55;
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 950px) {
-    .catalogo-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 650px) {
-    .catalogo-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .catalogo-encabezado h2 {
-      font-size: 34px;
-    }
-  }
-</style>
-
-<div class="catalogo-musical">
-
-  <div class="catalogo-encabezado">
-    <span class="catalogo-etiqueta">Archivo Musical Maravillas</span>
-
-    <h2>Explora mis canciones</h2>
-
-    <p>
-      Cada canción nace de una vivencia, una emoción y una historia que encontró su propia melodía.
-    </p>
+  <div class="featured-heading">
+    <span class="featured-label">CANCIÓN DESTACADA</span>
+    <h2 id="songTitle">Mi Tala</h2>
+    <span class="featured-line"></span>
   </div>
 
-  <div class="catalogo-grid">
+  <p id="descripcionCancion" class="featured-description">
+    Un homenaje a Tala, Jalisco, la tierra que me vio nacer
+    y que siempre llevo en el corazón.
+  </p>
 
-    <article class="cancion-tarjeta">
-
-      <img
-        class="cancion-portada"
-        src="fotos/regresar-jamas-cover.jpg"
-        alt="Portada de Regresar Jamás"
-      >
-
-      <div class="cancion-contenido">
-
-        <span class="cancion-numero">
-          Canción 001
-        </span>
-
-        <h3>Regresar Jamás</h3>
-
-        <p class="cancion-genero">
-          Pop
-        </p>
-
-        <p class="cancion-descripcion">
-          Una historia de dignidad, esperanza y la fuerza necesaria para decidir no volver atrás.
-        </p>
-
-        <a
-          class="cancion-boton"
-          href="canciones/regresar-jamas.html"
-        >
-          Escuchar y conocer la historia
-        </a>
-
-      </div>
-
-    </article>
-
-    <article class="cancion-tarjeta">
-
-      <img
-        class="cancion-portada"
-        src="fotos/una-noche-mas-cover.jpg"
-        alt="Portada de Una Noche Más"
-      >
-
-      <div class="cancion-contenido">
-
-        <span class="cancion-numero">
-          Canción 002
-        </span>
-
-        <h3>Una Noche Más</h3>
-
-        <p class="cancion-genero">
-          Bachata
-        </p>
-
-        <p class="cancion-descripcion">
-          Una historia sobre el arrepentimiento de perder el verdadero amor cuando ya es demasiado tarde.
-        </p>
-
-        <a
-          class="cancion-boton"
-          href="canciones/una-noche-mas.html"
-        >
-          Escuchar y conocer la historia
-        </a>
-
-      </div>
-
-    </article>
-
-    <article class="cancion-tarjeta">
-
-      <img
-        class="cancion-portada"
-        src="fotos/escondida-en-mi-destino-cover.jpg"
-        alt="Portada de Escondida en mi destino"
-      >
-
-      <div class="cancion-contenido">
-
-        <span class="cancion-numero">
-          Canción 003
-        </span>
-
-        <h3>Escondida en mi destino</h3>
-
-        <p class="cancion-genero">
-          Regional Mexicano · Mariachi Ranchero
-        </p>
-
-        <p class="cancion-descripcion">
-          Una historia sobre el amor que el destino tenía reservado, aunque el camino haya sido largo.
-        </p>
-
-        <a
-          class="cancion-boton"
-          href="canciones/escondida-en-mi-destino.html"
-        >
-          Escuchar y conocer la historia
-        </a>
-
-      </div>
-
-    </article>
-
-
-<article class="cancion-tarjeta">
-
-  <img
-    class="cancion-portada"
-   src="fotos/soledad.jpg"
-    alt="Portada de Soledad"
-  >
-
-  <div class="cancion-contenido">
-
-    <span class="cancion-numero">
-      Canción 004
+  <div class="featured-credits">
+    <span>
+      <strong>Autor</strong>
+      Martín González
     </span>
 
-    <h3>Soledad</h3>
+    <span>
+      <strong>Compositor</strong>
+      Martín González
+    </span>
 
-    <p class="cancion-genero">
-      Regional Mexicano
-    </p>
-
-    <p class="cancion-descripcion">
-      Una historia donde la ausencia, el silencio y los recuerdos se convierten en la única compañía.
-    </p>
-
-    <a
-      class="cancion-boton"
-      href="canciones/soledad.html"
-    >
-      Escuchar y conocer la historia
-    </a>
-
+    <span>
+      <strong>Estudio</strong>
+      GLE² Studio
+    </span>
   </div>
 
-</article>
-  </div>
+    <audio controls style="width:100%; margin-top:20px;">
+        <source src="audio/Tapita.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+<video id="videoPlayer" controls width="100%" style="border-radius:12px; margin-top:20px;">
+  <source id="videoSource" src="videos/mi-tala.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+</video>
+<h3 style="margin-top:30px; color:#d4af37;">
+🎵 Catálogo Musical
+</h3>
 
+<ul style="list-style:none; padding:0; line-height:2.8;">
+ <li><a id="song1" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Cuando fui de ella',
+      'audio/cuando-fui-de-ella.mp3',
+      'Una historia de amor, recuerdos y sentimientos que permanecen aun después de la separación.'
+    )"
+    style="color:white; text-decoration:none;">
+    Cuando fui de ella
+  </a></li>
+
+  <li><a id="song2" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Con la misma moneda',
+      'audio/con-la-misma-moneda.mp3',
+      'Una historia sobre el amor, el orgullo y las consecuencias de pagar con la misma moneda.'
+    )"
+    style="color:white; text-decoration:none;">
+    Con la misma moneda
+  </a></li>
+
+ <li><a id="song3" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Mi Pantalón',
+      'audio/mi-pantalon.mp3',
+      'Una canción con personalidad, recuerdos y una historia cotidiana convertida en música.'
+    )"
+    style="color:white; text-decoration:none;">
+    Mi Pantalón
+  </a></li>
+
+ <li><a id="song4" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Reyna de mis recuerdos',
+      'audio/reyna-de-mis-recuerdos.wav',
+      'Un homenaje a esa persona que permanece como reina de los recuerdos y del corazón.'
+    )"
+    style="color:white; text-decoration:none;">
+    Reyna de mis recuerdos
+  </a></li>
+
+  <li><a id="song5" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Norma, My Dear',
+      'audio/norma-my-dear.mp3',
+      'Una canción especial dedicada con amor, admiración y gratitud.'
+    )"
+    style="color:white; text-decoration:none;">
+    Norma, My Dear
+  </a></li>
+
+   <li>
+  <a id="song6" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Pagando mis errores',
+      'audio/pagando-por-mis-errores.mp3',
+      'Una reflexión sobre las decisiones, el arrepentimiento y el precio de nuestros errores.'
+    )"
+    style="color:white; text-decoration:none;">
+<li>
+  <a id="song7" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Tal para cual',
+      'audio/tal-para-cual.mp3',
+      'La historia de dos personas que se reconocen como iguales, con virtudes y defectos.'
+    )"
+    style="color:white; text-decoration:none;">
+    Tal para cual
+  </a>
+</li>
+
+
+  <li><a id="song8" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Estamos a mano',
+      'audio/estamos-a-mano.mp3',
+      'Una canción sobre cerrar cuentas emocionales y dejar atrás lo que alguna vez dolió.'
+    )"
+    style="color:white; text-decoration:none;">
+    Estamos a mano
+  </a></li>
+
+  <li><a id="song9" href="javascript:void(0)"
+    onclick="cambiarCancion(
+      'Ya Último',
+      'audio/ya-ultimo.mp3',
+      'Una despedida definitiva: la última palabra después de una historia que llegó a su final.'
+    )"
+    style="color:white; text-decoration:none;">
+    Ya Último
+  </a></li>
+    Pagando mis errores
+  </a>
+</li>
+
+
+</ul>
+    <div class="buttons">
+      <a href="https://open.spotify.com/intl-es/track/1PBJ0rCNeQKq8XVZe03cWE?si=3991b6c5bc8149e1" target="_blank" class="btn btn-green">🟢 Escuchar en Spotify</a>
+<a href="javascript:void(0)" class="btn btn-gold" onclick="toggleLyrics();">Leer la letra</a>
+<a href="javascript:void(0)" class="btn btn-dark" onclick="toggleStory();">Historia de la canción</a>
+    </div>
+ <div class="lyrics" id="storyBox" style="display:none;">
+  <h3>Historia de la canción</h3>
+  <p>
+    “Mi Tala” nació como un homenaje a Tala, Jalisco, la tierra que me vio nacer.
+    Es una canción escrita desde el corazón para reconocer sus paisajes, sus tradiciones,
+    su gente hospitalaria y las raíces que siempre llevo conmigo.
+  </p>
 </div>
+<div class="lyrics" id="lyricsBox" style="display:none;">
 
-</section>
+<h3>Mi Tala</h3>
 
-
+<p>
+Tala te conecta al cielo,<br>
+solo Dios sabe dónde está.<br>
+Sus cañaverales de verde,<br>
+también sus agaves,<br>
+también su mezzcal.
+</p>
+</div>
+</div>
+</div>
+  </section>
 
   <section id="compositor" class="section">
     <h2>Compositor</h2>
@@ -1311,7 +1161,7 @@ section[id] {
     </p>
   </section>
 
-  <section id="trayectoria" class="section section-dark">
+  <section id="trayectoria" class="section section-dark"><
     <h2>Camino artístico</h2>
 
     <div class="timeline">
@@ -1453,50 +1303,35 @@ function toggleLyrics() {
     lyrics.style.display =
         lyrics.style.display === "block" ? "none" : "block";
 }
-function cambiarCancion(titulo, archivoAudio, descripcionTexto, archivoVideo = "") {
-  const tituloCancion = document.getElementById("songTitle");
-  const descripcionCancion = document.getElementById("descripcionCancion");
+function cambiarCancion(titulo, archivoAudio, descripcionTexto) {
+   const tituloCancion = document.getElementById("songTitle");
+   const descripcionCancion = document.getElementById("descripcionCancion");
+    const audioSource = document.querySelector("audio source");
+    const audioPlayer = document.querySelector("audio");
 
-  const audioSource = document.querySelector("audio source");
-  const audioPlayer = document.querySelector("audio");
-
-  const videoPlayer = document.getElementById("videoPlayer");
-  const videoSource = document.getElementById("videoSource");
-
-  tituloCancion.textContent = titulo;
-  descripcionCancion.textContent = descripcionTexto;
-
-  document.querySelectorAll("#musica ul a").forEach((link) => {
+    tituloCancion.textContent = titulo;
+    descripcionCancion.textContent = descripcionTexto;
+    document.querySelectorAll('#musica ul a').forEach(link => {
     link.style.color = "white";
     link.style.transform = "scale(1)";
     link.style.fontWeight = "normal";
     link.style.textShadow = "none";
-    link.style.display = "inline-block";
-  });
+link.style.display = "inline-block";
+});
 
-  const enlace = [...document.querySelectorAll("#musica ul a")]
-    .find((a) => a.textContent.trim() === titulo);
+const enlace = [...document.querySelectorAll('#musica ul a')]
+    .find(a => a.textContent.trim() === titulo);
 
-  if (enlace) {
+if (enlace) {
     enlace.style.color = "#d4af37";
     enlace.style.transform = "scale(1.08)";
     enlace.style.fontWeight = "bold";
     enlace.style.textShadow = "0 0 12px rgba(212,175,55,.8)";
-  }
-
-  audioSource.src = archivoAudio;
-  audioPlayer.load();
-  audioPlayer.play();
-
-  if (archivoVideo) {
-   videoPlayer.src = archivoVideo;
-    videoPlayer.style.display = "block";
-    videoPlayer.load();
-    videoPlayer.play();
-  } else {
-    videoPlayer.pause();
-    videoPlayer.style.display = "none";
-  }
+enlace.style.display = "inline-block";
+}
+    audioSource.src = archivoAudio;
+    audioPlayer.load();
+    audioPlayer.play();
 }
 function toggleStory() {
     const lyrics = document.getElementById("lyricsBox");
