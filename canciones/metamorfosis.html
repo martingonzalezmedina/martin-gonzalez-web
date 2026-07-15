@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amar es Dolor | Martín González Maravillas</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#050505;
+color:white;
+}
+
+.song-navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 55px;
+box-sizing:border-box;
+background:rgba(5,5,5,.92);
+border-bottom:1px solid rgba(212,175,55,.35);
+z-index:1000;
+}
+
+.song-logo{
+color:#d4af37;
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.song-navbar a{
+color:white;
+text-decoration:none;
+padding:10px 16px;
+border:1px solid rgba(212,175,55,.45);
+border-radius:8px;
+transition:.3s;
+}
+
+.song-navbar a:hover{
+background:#d4af37;
+color:#111;
+}
+
+.song-hero{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:130px 30px 80px;
+
+text-align:center;
+
+background:
+radial-gradient(circle at 50% 25%,rgba(212,175,55,.18),transparent 30%),
+radial-gradient(circle at 15% 80%,rgba(90,40,140,.18),transparent 28%),
+linear-gradient(145deg,#050505,#151515 55%,#000);
+
+}
+
+.song-hero-content{
+max-width:900px;
+}
+
+.song-label{
+
+display:inline-block;
+
+margin-bottom:20px;
+
+color:#d4af37;
+
+font-size:14px;
+
+letter-spacing:5px;
+
+font-weight:bold;
+
+text-transform:uppercase;
+
+}
+
+.song-hero h1{
+
+margin:0;
+
+font-size:72px;
+
+color:#d4af37;
+
+}
+
+.song-subtitle{
+
+margin-top:24px;
+
+font-size:25px;
+
+line-height:1.6;
+
+color:#efefef;
+
+}
+
+.song-meta{
+
+margin-top:28px;
+
+font-size:18px;
+
+color:#bbbbbb;
+
+}
+
+.song-player{
+
+padding:90px 30px;
+
+text-align:center;
+
+background:#080808;
+
+}
+
+.song-cover img{
+
+width:100%;
+
+max-width:560px;
+
+border-radius:18px;
+
+border:2px solid rgba(212,175,55,.35);
+
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.song-player h2{
+
+color:#d4af37;
+
+font-size:38px;
+
+margin-top:25px;
+
+}
+
+.song-player audio{
+
+width:100%;
+
+max-width:650px;
+
+margin-top:25px;
+
+}
+
+.song-story{
+
+max-width:900px;
+
+margin:70px auto;
+
+padding:50px;
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:18px;
+
+box-sizing:border-box;
+
+}
+
+.song-story h2{
+
+text-align:center;
+
+color:#d4af37;
+
+font-size:38px;
+
+}
+
+.song-story p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#eeeeee;
+
+}
+
+.song-quote{
+
+margin-top:45px;
+
+text-align:center;
+
+}
+
+.song-quote h2{
+
+color:#d4af37;
+
+}
+
+.song-quote blockquote{
+
+max-width:720px;
+
+margin:auto;
+
+font-size:28px;
+
+font-style:italic;
+
+line-height:1.6;
+
+padding-left:25px;
+
+border-left:4px solid #d4af37;
+
+}
+
+@media(max-width:800px){
+
+.song-navbar{
+padding:15px 20px;
+}
+
+.song-logo{
+font-size:18px;
+}
+
+.song-hero h1{
+font-size:44px;
+}
+
+.song-subtitle{
+font-size:20px;
+}
+
+.song-story{
+padding:30px;
+}
+
+.song-story p{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="song-navbar">
+
+<div class="song-logo">
+
+MARTÍN GONZÁLEZ
+
+</div>
+
+<a href="../index.html#musica">
+
+← Volver al catálogo
+
+</a>
+
+</nav>
+
+<header class="song-hero">
+
+<div class="song-hero-content">
+
+<span class="song-label">
+
+Archivo Musical • Canción 005
+
+</span>
+
+<h1>Metamorfosis</h1>
+
+<p class="song-subtitle">
+
+Perdonar no siempre significa volver; a veces significa liberarte para comenzar una nueva vida.
+
+</p>
+
+<p class="song-meta">
+
+Banda Regional Mexicano
+
+</p>
+
+</div>
+
+</header>
+
+<section class="song-player">
+
+<div class="song-cover">
+
+<img src="../fotos/metamorfosis.jpg"
+alt="Metamorfosis">
+
+</div>
+
+<span class="song-label">
+
+Escuchar canción
+
+</span>
+
+<h2>Metamorfosis</h2>
+
+<audio controls>
+
+<source src="../audio/metamorfosis.mp3"
+type="audio/mpeg">
+
+</audio>
+
+</section>
+
+<section class="song-story">
+
+<span class="song-label">
+
+La historia detrás de la canción
+
+</span>
+
+<h2>Metamorfosis</h2>
+
+<p>
+
+"Metamorfosis" habla del momento en que una persona comprende que seguir viviendo con rencor solo prolonga el dolor. Después de una separación, decide iniciar un cambio profundo para recuperar la paz que había perdido.
+
+</p>
+
+<p>
+
+La transformación comienza con una decisión: restarle años al odio y adelantar la fecha del perdón. No porque la otra persona lo merezca necesariamente, sino porque el corazón necesita liberarse para volver a vivir sin cadenas.
+
+</p>
+
+<p>
+
+También decide arrancar de raíz los recuerdos que todavía lastiman, aceptar la soledad como parte del proceso y aprender a caminar nuevamente sin depender de quien ya no está. Poco a poco vuelve a descubrir la ilusión de enamorarse otra vez, dejando atrás todo aquello que lo mantenía detenido.
+
+</p>
+
+<p>
+
+Inspirada en una experiencia personal, esta canción representa el renacimiento emocional que muchas personas viven después de una ruptura. No es una historia de reconciliación, sino de crecimiento, perdón y transformación interior.
+
+</p>
+
+<p>
+
+"Metamorfosis" es una banda regional mexicana que recuerda que las heridas pueden sanar cuando tenemos el valor de cambiar por dentro y empezar de nuevo.
+
+</p>
+
+<div class="song-quote">
+
+<h2>
+
+Frase de la canción
+
+</h2>
+
+<blockquote>
+
+"El verdadero cambio comienza el día que decides perdonar para volver a vivir."
+
+</blockquote>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
