@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amar es Dolor | Martín González Maravillas</title>
+
+<style>
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#050505;
+color:white;
+}
+
+.song-navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 55px;
+box-sizing:border-box;
+background:rgba(5,5,5,.92);
+border-bottom:1px solid rgba(212,175,55,.35);
+z-index:1000;
+}
+
+.song-logo{
+color:#d4af37;
+font-size:22px;
+font-weight:bold;
+letter-spacing:2px;
+}
+
+.song-navbar a{
+color:white;
+text-decoration:none;
+padding:10px 16px;
+border:1px solid rgba(212,175,55,.45);
+border-radius:8px;
+transition:.3s;
+}
+
+.song-navbar a:hover{
+background:#d4af37;
+color:#111;
+}
+
+.song-hero{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:130px 30px 80px;
+
+text-align:center;
+
+background:
+radial-gradient(circle at 50% 25%,rgba(212,175,55,.18),transparent 30%),
+radial-gradient(circle at 15% 80%,rgba(90,40,140,.18),transparent 28%),
+linear-gradient(145deg,#050505,#151515 55%,#000);
+
+}
+
+.song-hero-content{
+max-width:900px;
+}
+
+.song-label{
+
+display:inline-block;
+
+margin-bottom:20px;
+
+color:#d4af37;
+
+font-size:14px;
+
+letter-spacing:5px;
+
+font-weight:bold;
+
+text-transform:uppercase;
+
+}
+
+.song-hero h1{
+
+margin:0;
+
+font-size:72px;
+
+color:#d4af37;
+
+}
+
+.song-subtitle{
+
+margin-top:24px;
+
+font-size:25px;
+
+line-height:1.6;
+
+color:#efefef;
+
+}
+
+.song-meta{
+
+margin-top:28px;
+
+font-size:18px;
+
+color:#bbbbbb;
+
+}
+
+.song-player{
+
+padding:90px 30px;
+
+text-align:center;
+
+background:#080808;
+
+}
+
+.song-cover img{
+
+width:100%;
+
+max-width:560px;
+
+border-radius:18px;
+
+border:2px solid rgba(212,175,55,.35);
+
+box-shadow:0 20px 45px rgba(0,0,0,.45);
+
+}
+
+.song-player h2{
+
+color:#d4af37;
+
+font-size:38px;
+
+margin-top:25px;
+
+}
+
+.song-player audio{
+
+width:100%;
+
+max-width:650px;
+
+margin-top:25px;
+
+}
+
+.song-story{
+
+max-width:900px;
+
+margin:70px auto;
+
+padding:50px;
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(212,175,55,.25);
+
+border-radius:18px;
+
+box-sizing:border-box;
+
+}
+
+.song-story h2{
+
+text-align:center;
+
+color:#d4af37;
+
+font-size:38px;
+
+}
+
+.song-story p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#eeeeee;
+
+}
+
+.song-quote{
+
+margin-top:45px;
+
+text-align:center;
+
+}
+
+.song-quote h2{
+
+color:#d4af37;
+
+}
+
+.song-quote blockquote{
+
+max-width:720px;
+
+margin:auto;
+
+font-size:28px;
+
+font-style:italic;
+
+line-height:1.6;
+
+padding-left:25px;
+
+border-left:4px solid #d4af37;
+
+}
+
+@media(max-width:800px){
+
+.song-navbar{
+padding:15px 20px;
+}
+
+.song-logo{
+font-size:18px;
+}
+
+.song-hero h1{
+font-size:44px;
+}
+
+.song-subtitle{
+font-size:20px;
+}
+
+.song-story{
+padding:30px;
+}
+
+.song-story p{
+font-size:18px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="song-navbar">
+
+<div class="song-logo">
+
+MARTÍN GONZÁLEZ
+
+</div>
+
+<a href="../index.html#musica">
+
+← Volver al catálogo
+
+</a>
+
+</nav>
+
+<header class="song-hero">
+
+<div class="song-hero-content">
+
+<span class="song-label">
+
+Archivo Musical • Canción 005
+
+</span>
+
+<h1>Buena Elección</h1>
+
+<p class="song-subtitle">
+
+No todos los amores terminan con una despedida; algunos se terminan mientras todavía viven bajo el mismo techo.
+
+</p>
+
+<p class="song-meta">
+
+Pop · Balada
+
+</p>
+
+</div>
+
+</header>
+
+<section class="song-player">
+
+<div class="song-cover">
+
+<img src="../fotos/buena-eleccion.jpg"
+alt="Buena Elección">
+
+</div>
+
+<span class="song-label">
+
+Escuchar canción
+
+</span>
+
+<h2>Buena Elección</h2>
+
+<audio controls>
+
+<source src="../audio/buena-eleccion.mp3"
+type="audio/mpeg">
+
+</audio>
+
+</section>
+
+<section class="song-story">
+
+<span class="song-label">
+
+La historia detrás de la canción
+
+</span>
+
+<h2>Buena Elección</h2>
+
+<p>
+
+Esta canción habla de una realidad que muchas parejas viven con el paso del tiempo. Dos personas que un día creyeron haber encontrado al amor de su vida comienzan a descubrir que algo ha cambiado.
+
+</p>
+
+<p>
+
+Los besos ya no tienen la misma dulzura, las conversaciones desaparecen y el silencio ocupa el lugar donde antes existían las risas. Las invitaciones para salir se convierten en excusas, y un teléfono celular empieza a recibir más atención que la persona que está sentada enfrente.
+
+</p>
+
+<p>
+
+Poco a poco nace la duda: ¿realmente fue la buena elección o simplemente el tiempo mostró una realidad que antes no se quería ver?
+
+</p>
+
+<p>
+
+"Buena Elección" es una reflexión sobre el desgaste de una relación y ese momento en el que dos personas descubren que el amor no solo necesita promesas, sino también atención, comunicación y el deseo de seguir eligiéndose todos los días.
+
+</p>
+
+<div class="song-quote">
+
+<h2>
+
+Frase de la canción
+
+</h2>
+
+<blockquote>
+
+"A veces no duele que el amor termine... duele descubrir que dejó de existir mucho antes de la despedida."
+
+</blockquote>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
